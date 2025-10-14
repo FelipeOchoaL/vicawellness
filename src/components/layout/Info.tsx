@@ -1,12 +1,16 @@
+'use client'
+
 import React from 'react'
-import Button from '@/components/ui/Button'
+import { useLanguage } from '@/context/LanguageContext'
 
 const Info: React.FC = () => {
+  const { t } = useLanguage()
+  
   const services = [
     {
       id: 1,
       icon: '/service-icon-1.svg', // Placeholder - you can add your icon here
-      title: 'Experiences of inner calm and connection',
+      title: t('info.service1'),
       iconPlaceholder: (
         <svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg" className="mx-auto">
           <circle cx="40" cy="25" r="8" stroke="currentColor" strokeWidth="2" fill="none"/>
@@ -20,7 +24,7 @@ const Info: React.FC = () => {
     {
       id: 2,
       icon: '/service-icon-2.svg', // Placeholder - you can add your icon here
-      title: 'Creative activities that nurture the soul and express from the heart.',
+      title: t('info.service2'),
       iconPlaceholder: (
         <svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg" className="mx-auto">
           <path d="M25 35 C25 35, 30 25, 40 25 C50 25, 55 35, 55 35" stroke="currentColor" strokeWidth="2" fill="none"/>
@@ -34,7 +38,7 @@ const Info: React.FC = () => {
     {
       id: 3,
       icon: '/service-icon-3.svg', // Placeholder - you can add your icon here
-      title: 'Emotional support and spiritual guidance.',
+      title: t('info.service3'),
       iconPlaceholder: (
         <svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg" className="mx-auto">
           <path d="M40 50 C40 50, 30 45, 30 35 C30 28, 35 25, 40 25 C45 25, 50 28, 50 35 C50 45, 40 50, 40 50Z" stroke="currentColor" strokeWidth="2" fill="none"/>
@@ -63,7 +67,7 @@ const Info: React.FC = () => {
               
               {/* CTA Button */}
               <button className="bg-vica-mint text-vica-greenletter px-8 py-2 text-sm font-medium tracking-wide hover:bg-vica-mint/90 transition-colors">
-                VIEW SERVICE
+                {t('info.button')}
               </button>
             </div>
           ))}
@@ -74,4 +78,3 @@ const Info: React.FC = () => {
 }
 
 export default Info
-

@@ -3,15 +3,17 @@
 import React, { useState } from 'react'
 import Link from 'next/link'
 import { Menu, X } from 'lucide-react'
+import { useLanguage } from '@/context/LanguageContext'
 
 const MainPageHeader: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const { language, toggleLanguage, t } = useLanguage()
 
   const navigation = [
-    { name: 'HOME', href: '/' },
-    { name: 'SERVICES', href: '#services' },
-    { name: 'ABOUT', href: '#about' },
-    { name: 'CONTACT', href: '#contact' },
+    { name: t('nav.home'), href: '/' },
+    { name: t('nav.services'), href: '#services' },
+    { name: t('nav.about'), href: '#about' },
+    { name: t('nav.contact'), href: '#contact' },
   ]
 
   return (
@@ -73,7 +75,7 @@ const MainPageHeader: React.FC = () => {
           <div className="relative z-10 px-4 sm:px-6 lg:px-8">
             <div className="flex justify-end items-center h-24">
               {/* Desktop Navigation */}
-              <nav className="hidden md:flex space-x-8 mr-8">
+              <nav className="hidden md:flex space-x-8 mr-6">
                 {navigation.map((item) => (
                   <Link
                     key={item.name}
@@ -85,10 +87,20 @@ const MainPageHeader: React.FC = () => {
                 ))}
               </nav>
 
+              {/* Language Toggle */}
+              <div className="hidden md:flex items-center mr-4">
+                <button 
+                  onClick={toggleLanguage}
+                  className="px-4 py-2 text-sm font-medium text-white/90 hover:text-white border border-white/30 rounded-full transition-colors"
+                >
+                  {language === 'en' ? 'ES' : 'EN'}
+                </button>
+              </div>
+
               {/* Desktop CTA */}
               <div className="hidden md:flex items-center">
                 <button className="bg-vica-mint backdrop-blur-sm text-vica-greenletter px-6 py-2 rounded-full text-sm font-medium hover:bg-white/30 transition-all duration-300 border border-white/20">
-                  Book now
+                  {t('button.book')}
                 </button>
               </div>
 
@@ -124,9 +136,15 @@ const MainPageHeader: React.FC = () => {
                 {item.name}
               </Link>
             ))}
-            <div className="pt-4">
+            <div className="pt-4 grid gap-3">
+              <button 
+                onClick={toggleLanguage}
+                className="w-full px-4 py-2 text-sm font-medium text-white/90 hover:text-white border border-white/30 rounded-full transition-colors"
+              >
+                {language === 'en' ? 'ES' : 'EN'}
+              </button>
               <button className="w-full bg-white/20 backdrop-blur-sm text-vica-greenletter px-6 py-2 rounded-full text-sm font-medium hover:bg-white/30 transition-all duration-300 border border-white/20">
-                Book now
+                {t('button.book')}
               </button>
             </div>
           </div>

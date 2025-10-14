@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import { Rufina } from 'next/font/google'
 import './globals.css'
+import { LanguageProvider } from '@/context/LanguageContext'
 
 const inter = Inter({ subsets: ['latin'] })
 const rufina = Rufina({ 
@@ -66,9 +67,11 @@ export default function RootLayout({
   return (
     <html lang="en" className="h-full">
       <body className={`${inter.className} ${rufina.variable} h-full antialiased`}>
-        <div className="min-h-full">
-          {children}
-        </div>
+        <LanguageProvider>
+          <div className="min-h-full">
+            {children}
+          </div>
+        </LanguageProvider>
       </body>
     </html>
   )

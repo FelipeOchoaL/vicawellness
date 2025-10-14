@@ -1,8 +1,13 @@
+'use client'
+
 import React from 'react'
 import { ArrowRight, Heart, Activity, Users } from 'lucide-react'
 import Button from '@/components/ui/Button'
+import { useLanguage } from '@/context/LanguageContext'
 
 const Hero: React.FC = () => {
+  const { t } = useLanguage()
+  
   return (
     <section className="relative flex min-h-screen">
       {/* Left Section - Mint Green */}
@@ -12,22 +17,18 @@ const Hero: React.FC = () => {
           <div className="max-w-lg">
             {/* Hero Content */}
             <h1 className="text-4xl md:text-5xl font-bold text-vica-greenletter mb-4 font-rufina">
-              VICA WELLNESS
+              {t('hero.title')}
             </h1>
             <p className="text-lg font-bold text-vica-greenletter mb-6 font-rufina">
-              By Luz Elvira Coach
+              {t('hero.subtitle')}
             </p>
             <p className="text-base text-vica-greenletter mb-8 leading-relaxed">
-              At Vica Wellness, we provide comprehensive and 
-              holistic well-being services that embrace 
-              mental, emotional, physical, and spiritual 
-              dimensions. We are here to help you live with vitality and 
-              inner balance.
+              {t('hero.description')}
             </p>
             
             {/* CTA Button */}
             <Button size="lg" className="text-base px-8 bg-vica-brown hover:bg-vica-brown/90 text-white">
-              EXPLORE NOW
+              {t('hero.button')}
             </Button>
           </div>
         </div>

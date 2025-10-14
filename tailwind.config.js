@@ -34,7 +34,11 @@ module.exports = {
         },
         vica: {
           DEFAULT: '#946A45',
-          50: '#C4E3DB',
+          mint: '#C4E3DA',
+          brown: '#946A45', 
+          beige: '#CFC8B6',
+          green: '#408775',
+          50: '#C4E3DA',
           100: '#ede3d8',
           200: '#dbc7b1',
           300: '#c9ab8a',

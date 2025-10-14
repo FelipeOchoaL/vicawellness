@@ -14,9 +14,14 @@ export const metadata: Metadata = {
 export default function HomePage() {
   return (
     <>
-      <MainPageHeader />
-      <main className="min-h-screen">
+      <div className="relative">
         <Hero />
+        {/* Header positioned absolutely over the Hero */}
+        <div className="absolute top-0 left-0 right-0 z-20">
+          <MainPageHeader />
+        </div>
+      </div>
+      <main>
         <Features />
         <About />
         <CTA />

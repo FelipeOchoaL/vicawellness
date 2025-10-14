@@ -18,9 +18,10 @@ const MainPageHeader: React.FC = () => {
     <header className="relative">
       {/* Two-section layout */}
       <div className="flex">
-        {/* Left Section - 75% opacity */}
+        {/* Left Section - Brown with opacity */}
         <div className="w-1/2 relative">
-          <div className="absolute inset-0 bg-vica/75"></div>
+          <div className="absolute inset-0 bg-vica-mint"></div>
+          <div className="absolute inset-0 bg-vica-brown/75"></div>
           <div className="relative z-10 px-4 sm:px-6 lg:px-8">
             <div className="flex justify-start items-center h-16">
               {/* Logo */}
@@ -60,9 +61,15 @@ const MainPageHeader: React.FC = () => {
           </div>
         </div>
 
-        {/* Right Section - 30% opacity */}
+        {/* Right Section - Background Image with brown overlay */}
         <div className="w-1/2 relative">
-          <div className="absolute inset-0 bg-vica/30"></div>
+          <div 
+            className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+            style={{
+              backgroundImage: "url('/wellness-bg.jpg')"
+            }}
+          ></div>
+          <div className="absolute inset-0 bg-vica-brown/75"></div>
           <div className="relative z-10 px-4 sm:px-6 lg:px-8">
             <div className="flex justify-end items-center h-16">
               {/* Desktop Navigation */}
@@ -106,7 +113,7 @@ const MainPageHeader: React.FC = () => {
       {/* Mobile Navigation - Full width overlay */}
       {isMenuOpen && (
         <div className="md:hidden absolute top-16 left-0 right-0 z-20">
-          <div className="mx-4 px-4 pt-4 pb-6 space-y-2 bg-vica/90 backdrop-blur-sm rounded-lg shadow-lg">
+          <div className="mx-4 px-4 pt-4 pb-6 space-y-2 bg-vica-brown/90 backdrop-blur-sm rounded-lg shadow-lg">
             {navigation.map((item) => (
               <Link
                 key={item.name}

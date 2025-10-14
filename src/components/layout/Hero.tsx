@@ -4,65 +4,45 @@ import Button from '@/components/ui/Button'
 
 const Hero: React.FC = () => {
   return (
-    <section className="relative bg-gradient-to-br from-primary-50 to-secondary-50 py-20 lg:py-32 bg-vica-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center">
-          {/* Hero Content */}
-          <div className="max-w-3xl mx-auto">
-            <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
-              Transform Your
-              <span className="text-primary-600 block">Wellness Journey</span>
+    <section className="relative flex min-h-screen">
+      {/* Left Section - Mint Green */}
+      <div className="w-1/2 relative">
+        <div className="absolute inset-0 bg-vica-mint"></div>
+        <div className="relative z-10 flex items-center justify-center min-h-screen px-4 sm:px-6 lg:px-8">
+          <div className="max-w-lg">
+            {/* Hero Content */}
+            <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+              VICA WELLNESS
             </h1>
-            <p className="text-xl text-gray-600 mb-8 leading-relaxed">
-              Take control of your health with personalized wellness plans, 
-              expert guidance, and a supportive community. Start your journey 
-              to a healthier, happier you today.
+            <p className="text-lg font-medium text-gray-800 mb-6">
+              By Luz Elvira Coach
+            </p>
+            <p className="text-base text-gray-700 mb-8 leading-relaxed">
+              At Vica Wellness, we provide comprehensive and 
+              holistic well-being services that embrace 
+              mental, emotional, physical, and spiritual 
+              dimensions. We are here to help you live with vitality and 
+              inner balance.
             </p>
             
-            {/* CTA Buttons */}
-            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-              <Button size="lg" className="text-lg px-8">
-                Start Your Journey
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </Button>
-              <Button variant="outline" size="lg" className="text-lg px-8">
-                Learn More
-              </Button>
-            </div>
-
-            {/* Stats */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-2xl mx-auto">
-              <div className="text-center">
-                <div className="flex justify-center mb-2">
-                  <Users className="h-8 w-8 text-primary-600" />
-                </div>
-                <div className="text-2xl font-bold text-gray-900">10K+</div>
-                <div className="text-gray-600">Active Users</div>
-              </div>
-              <div className="text-center">
-                <div className="flex justify-center mb-2">
-                  <Heart className="h-8 w-8 text-primary-600" />
-                </div>
-                <div className="text-2xl font-bold text-gray-900">95%</div>
-                <div className="text-gray-600">Success Rate</div>
-              </div>
-              <div className="text-center">
-                <div className="flex justify-center mb-2">
-                  <Activity className="h-8 w-8 text-primary-600" />
-                </div>
-                <div className="text-2xl font-bold text-gray-900">24/7</div>
-                <div className="text-gray-600">Support</div>
-              </div>
-            </div>
+            {/* CTA Button */}
+            <Button size="lg" className="text-base px-8 bg-vica-brown hover:bg-vica-brown/90 text-white">
+              EXPLORE NOW
+            </Button>
           </div>
         </div>
       </div>
 
-      {/* Background Pattern */}
-      <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute -top-40 -right-32 w-80 h-80 bg-primary-100 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob"></div>
-        <div className="absolute -bottom-40 -left-32 w-80 h-80 bg-secondary-100 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob animation-delay-2000"></div>
-        <div className="absolute top-40 left-1/2 w-80 h-80 bg-primary-200 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob animation-delay-4000"></div>
+      {/* Right Section - Background Image */}
+      <div className="w-1/2 relative">
+        <div 
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+          style={{
+            backgroundImage: "url('/wellness-bg.jpg')"
+          }}
+        ></div>
+        {/* Optional overlay for better contrast */}
+        <div className="absolute inset-0 bg-black/10"></div>
       </div>
     </section>
   )

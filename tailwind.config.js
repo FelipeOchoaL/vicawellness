@@ -38,6 +38,7 @@ module.exports = {
           brown: '#946A45', 
           beige: '#CFC8B6',
           green: '#408775',
+          greenletter: '#3A6D60',
           50: '#C4E3DA',
           100: '#ede3d8',
           200: '#dbc7b1',
@@ -52,6 +53,7 @@ module.exports = {
       },
       fontFamily: {
         sans: ['Inter', 'system-ui', 'sans-serif'],
+        rufina: ['var(--font-rufina)', 'serif'],
       },
     },
   },

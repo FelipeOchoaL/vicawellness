@@ -1,6 +1,7 @@
 import { Metadata } from 'next'
 import MainPageHeader from '@/components/layout/MainPageHeader'
 import Hero from '@/components/layout/Hero'
+import Info from '@/components/layout/Info'
 import Features from '@/components/layout/Features'
 import About from '@/components/layout/About'
 import CTA from '@/components/layout/CTA'
@@ -22,6 +23,7 @@ export default function HomePage() {
         </div>
       </div>
       <main>
+        <Info />
         <Features />
         <About />
         <CTA />

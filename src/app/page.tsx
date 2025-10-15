@@ -4,6 +4,7 @@ import Hero from '@/components/layout/Hero'
 import Info from '@/components/layout/Info'
 import Features from '@/components/layout/Features'
 import About from '@/components/layout/About'
+import Opinions from '@/components/layout/Opinions'
 import CTA from '@/components/layout/CTA'
 import Footer from '@/components/layout/Footer'
 
@@ -26,7 +27,7 @@ export default function HomePage() {
         <Info />
         <Features />
         <About />
-        <CTA />
+        <Opinions />
       </main>
       <Footer />
     </>

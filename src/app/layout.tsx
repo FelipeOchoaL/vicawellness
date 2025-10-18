@@ -1,14 +1,8 @@
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
-import { Rufina } from 'next/font/google'
 import './globals.css'
 
 const inter = Inter({ subsets: ['latin'] })
-const rufina = Rufina({ 
-  subsets: ['latin'],
-  weight: ['400', '700'],
-  variable: '--font-rufina'
-})
 
 export const metadata: Metadata = {
   title: 'VicaWellness - Your Health & Wellness Partner',
@@ -65,7 +59,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className="h-full">
-      <body className={`${inter.className} ${rufina.variable} h-full antialiased`}>
+      <body className={`${inter.className} h-full antialiased`}>
         <div className="min-h-full">
           {children}
         </div>

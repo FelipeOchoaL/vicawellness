@@ -1,130 +1,93 @@
-'use client'
-
 import React from 'react'
-import Image from 'next/image'
+import { 
+  Heart, 
+  Activity, 
+  Brain, 
+  Moon, 
+  Users, 
+  BarChart3,
+  Shield,
+  Smartphone
+} from 'lucide-react'
 
 const Features: React.FC = () => {
-  const services = [
+  const features = [
     {
-      id: 1,
-      title: 'VICA EXPRESS',
-      description: 'Quick wellness sessions designed for your busy lifestyle. Rejuvenate in under an hour.',
-      image: '/vica-express.jpg', // Placeholder - add your image to /public/
-      bgClass: 'bg-vica-browncardervices/20',
-      textClass: 'text-vica-brown',
-      buttonClass: 'bg-vica-mint text-vica-greenletter'
+      icon: Heart,
+      title: 'Personalized Health Plans',
+      description: 'Get customized wellness plans tailored to your specific health goals, lifestyle, and preferences.',
     },
     {
-      id: 2,
-      title: 'VICA HARMONY',
-      description: 'Meditation and mindfulness practices to bring peace and balance to your daily life.',
-      image: '/vica-harmony.jpg', // Placeholder - add your image to /public/
-      bgClass: 'bg-vica-browncardervices/20',
-      textClass: 'text-vica-brown',
-      buttonClass: 'bg-vica-mint text-vica-greenletter'
+      icon: Activity,
+      title: 'Fitness Tracking',
+      description: 'Monitor your workouts, track progress, and stay motivated with our comprehensive fitness tools.',
     },
     {
-      id: 3,
-      title: 'VICA GUIDE',
-      description: 'Creative art therapy sessions that nurture the soul and encourage self-expression.',
-      image: '/vica-guide.jpg', // Placeholder - add your image to /public/
-      bgClass: 'bg-vica-browncardervices/20',
-      textClass: 'text-vica-brown',
-      buttonClass: 'bg-vica-mint text-vica-greenletter'
+      icon: Brain,
+      title: 'Mental Wellness',
+      description: 'Access meditation guides, stress management tools, and mental health resources.',
     },
     {
-      id: 4,
-      title: 'VICA SENIOR',
-      description: 'Specialized wellness programs tailored for our beloved senior community members.',
-      image: '/vica-senior.jpg', // Placeholder - add your image to /public/
-      bgClass: 'bg-vica-greenletter',
-      textClass: 'text-white',
-      buttonClass: 'bg-vica-mint text-vica-greenletter',
-      isSpecial: true
-    }
+      icon: Moon,
+      title: 'Sleep Optimization',
+      description: 'Improve your sleep quality with personalized recommendations and sleep tracking.',
+    },
+    {
+      icon: Users,
+      title: 'Community Support',
+      description: 'Connect with like-minded individuals and get support from our wellness community.',
+    },
+    {
+      icon: BarChart3,
+      title: 'Progress Analytics',
+      description: 'Visualize your progress with detailed analytics and insights into your wellness journey.',
+    },
+    {
+      icon: Shield,
+      title: 'Privacy & Security',
+      description: 'Your health data is protected with enterprise-grade security and privacy measures.',
+    },
+    {
+      icon: Smartphone,
+      title: 'Mobile App',
+      description: 'Access your wellness tools anywhere with our intuitive mobile application.',
+    },
   ]
 
   return (
-    <section className="py-20 lg:py-28 bg-vica-beige">
+    <section id="features" className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Section Header */}
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-vica-brown mb-4 font-rufina">
-            CARE SOLUTION
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+            Everything You Need for Your Wellness Journey
           </h2>
-          <p className="text-lg text-vica-brown max-w-3xl mx-auto leading-relaxed">
-            Explore our range of specialized care services designed to support your wellness journey. 
-            From quick rejuvenation sessions to comprehensive programs, we offer personalized solutions 
-            for every stage of life.
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            Our comprehensive platform provides all the tools and resources you need 
+            to achieve your health and wellness goals.
           </p>
         </div>
 
-        {/* Services Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {services.map((service, index) => (
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          {features.map((feature, index) => (
             <div
-              key={service.id}
-              className="group"
-              style={{
-                animation: `fadeInUp 0.6s ease-out ${index * 0.1}s both`
-              }}
+              key={index}
+              className="text-center p-6 rounded-lg hover:shadow-lg transition-shadow duration-300"
             >
-              {/* Card */}
-              <div className={`${service.bgClass} rounded-[30px] overflow-hidden transition-all duration-500 transform hover:-translate-y-2 hover:shadow-xl`}>
-                {/* Image Container */}
-                <div className="relative w-full h-48 bg-gray-300 overflow-hidden rounded-t-[30px]">
-                  {/* Placeholder for image - will show gray until you add actual images */}
-                  <div className="absolute inset-0 flex items-center justify-center text-gray-500 text-sm">
-                    {service.title}
-                    <br />
-                    Image Here
-                  </div>
-                  {/* Uncomment when you add images to /public/
-                  <Image
-                    src={service.image}
-                    alt={service.title}
-                    fill
-                    className="object-cover"
-                  />
-                  */}
-                </div>
-
-                {/* Content */}
-                <div className="p-6 text-center flex flex-col h-full">
-                  {/* Title */}
-                  <h3 className={`text-lg font-semibold ${service.textClass} mb-3 tracking-wide`}>
-                    {service.title}
-                  </h3>
-                  
-                  {/* Description */}
-                  <p className={`${service.textClass} text-sm mb-6 leading-relaxed ${service.isSpecial ? 'text-white/90' : 'opacity-80'}`}>
-                    {service.description}
-                  </p>
-                  
-                  {/* Button */}
-                  <button className={`${service.buttonClass} px-6 py-2 text-sm font-medium tracking-wide hover:opacity-90 transition-opacity mt-auto`}>
-                    VIEW SERVICE
-                  </button>
+              <div className="flex justify-center mb-4">
+                <div className="p-3 bg-primary-100 rounded-full">
+                  <feature.icon className="h-6 w-6 text-primary-600" />
                 </div>
               </div>
+              <h3 className="text-lg font-semibold text-gray-900 mb-2">
+                {feature.title}
+              </h3>
+              <p className="text-gray-600 text-sm leading-relaxed">
+                {feature.description}
+              </p>
             </div>
           ))}
         </div>
       </div>
-
-      {/* Add keyframe animation */}
-      <style jsx>{`
-        @keyframes fadeInUp {
-          from {
-            opacity: 0;
-            transform: translateY(30px);
-          }
-          to {
-            opacity: 1;
-            transform: translateY(0);
-          }
-        }
-      `}</style>
     </section>
   )
 }

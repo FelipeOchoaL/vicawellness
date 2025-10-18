@@ -18,12 +18,11 @@ const MainPageHeader: React.FC = () => {
     <header className="relative">
       {/* Two-section layout */}
       <div className="flex">
-        {/* Left Section - Brown with opacity */}
+        {/* Left Section - 75% opacity */}
         <div className="w-1/2 relative">
-          <div className="absolute inset-0 bg-vica-mint"></div>
-          <div className="absolute inset-0 bg-vica-brown/75"></div>
+          <div className="absolute inset-0 bg-vica/75"></div>
           <div className="relative z-10 px-4 sm:px-6 lg:px-8">
-            <div className="flex justify-start items-center h-24">
+            <div className="flex justify-start items-center h-16">
               {/* Logo */}
               <Link href="/" className="flex items-center space-x-2">
                 <div className="text-white">
@@ -61,17 +60,11 @@ const MainPageHeader: React.FC = () => {
           </div>
         </div>
 
-        {/* Right Section - Background Image with brown overlay */}
+        {/* Right Section - 30% opacity */}
         <div className="w-1/2 relative">
-          <div 
-            className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-            style={{
-              backgroundImage: "url('/wellness-bg.jpg')"
-            }}
-          ></div>
-          <div className="absolute inset-0 bg-vica-brown/75"></div>
+          <div className="absolute inset-0 bg-vica/30"></div>
           <div className="relative z-10 px-4 sm:px-6 lg:px-8">
-            <div className="flex justify-end items-center h-24">
+            <div className="flex justify-end items-center h-16">
               {/* Desktop Navigation */}
               <nav className="hidden md:flex space-x-8 mr-8">
                 {navigation.map((item) => (
@@ -87,7 +80,7 @@ const MainPageHeader: React.FC = () => {
 
               {/* Desktop CTA */}
               <div className="hidden md:flex items-center">
-                <button className="bg-vica-mint backdrop-blur-sm text-vica-greenletter px-6 py-2 rounded-full text-sm font-medium hover:bg-white/30 transition-all duration-300 border border-white/20">
+                <button className="bg-white/20 backdrop-blur-sm text-white px-6 py-2 rounded-full text-sm font-medium hover:bg-white/30 transition-all duration-300 border border-white/20">
                   Book now
                 </button>
               </div>
@@ -112,8 +105,8 @@ const MainPageHeader: React.FC = () => {
 
       {/* Mobile Navigation - Full width overlay */}
       {isMenuOpen && (
-        <div className="md:hidden absolute top-24 left-0 right-0 z-20">
-          <div className="mx-4 px-4 pt-4 pb-6 space-y-2 bg-vica-brown/90 backdrop-blur-sm rounded-lg shadow-lg">
+        <div className="md:hidden absolute top-16 left-0 right-0 z-20">
+          <div className="mx-4 px-4 pt-4 pb-6 space-y-2 bg-vica/90 backdrop-blur-sm rounded-lg shadow-lg">
             {navigation.map((item) => (
               <Link
                 key={item.name}
@@ -125,7 +118,7 @@ const MainPageHeader: React.FC = () => {
               </Link>
             ))}
             <div className="pt-4">
-              <button className="w-full bg-white/20 backdrop-blur-sm text-vica-greenletter px-6 py-2 rounded-full text-sm font-medium hover:bg-white/30 transition-all duration-300 border border-white/20">
+              <button className="w-full bg-white/20 backdrop-blur-sm text-white px-6 py-2 rounded-full text-sm font-medium hover:bg-white/30 transition-all duration-300 border border-white/20">
                 Book now
               </button>
             </div>

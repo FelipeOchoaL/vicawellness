@@ -1,118 +1,109 @@
 'use client'
 
 import React from 'react'
-import { Heart, Sparkles, Users, Palette, Brain, Sun } from 'lucide-react'
+import Image from 'next/image'
 
 const Features: React.FC = () => {
   const services = [
     {
       id: 1,
-      icon: Heart,
-      title: 'Vica Express',
-      description: 'Holistic well-being services for mental, emotional, physical, and spiritual balance.',
-      bgClass: 'bg-vica-mint',
-      textClass: 'text-vica-greenletter',
-      iconBg: 'bg-white/20'
+      title: 'VICA EXPRESS',
+      description: 'Quick wellness sessions designed for your busy lifestyle. Rejuvenate in under an hour.',
+      image: '/vica-express.jpg', // Placeholder - add your image to /public/
+      bgClass: 'bg-vica-browncardervices/20',
+      textClass: 'text-vica-brown',
+      buttonClass: 'bg-vica-mint text-vica-greenletter'
     },
     {
       id: 2,
-      icon: Sparkles,
-      title: 'Vica Harmony',
-      description: 'Meditation, breathing exercises, and mindfulness practices for inner peace.',
-      bgClass: 'bg-vica-beige',
+      title: 'VICA HARMONY',
+      description: 'Meditation and mindfulness practices to bring peace and balance to your daily life.',
+      image: '/vica-harmony.jpg', // Placeholder - add your image to /public/
+      bgClass: 'bg-vica-browncardervices/20',
       textClass: 'text-vica-brown',
-      iconBg: 'bg-white/20'
+      buttonClass: 'bg-vica-mint text-vica-greenletter'
     },
     {
       id: 3,
-      icon: Palette,
-      title: 'Vica Guide',
-      description: 'Art therapy, creative expression, and activities that nurture the soul.',
-      bgClass: 'bg-vica-mint',
-      textClass: 'text-vica-greenletter',
-      iconBg: 'bg-white/20'
+      title: 'VICA GUIDE',
+      description: 'Creative art therapy sessions that nurture the soul and encourage self-expression.',
+      image: '/vica-guide.jpg', // Placeholder - add your image to /public/
+      bgClass: 'bg-vica-browncardervices/20',
+      textClass: 'text-vica-brown',
+      buttonClass: 'bg-vica-mint text-vica-greenletter'
     },
     {
       id: 4,
-      icon: Brain,
-      title: 'Vica Senior',
-      description: 'Personal development coaching and emotional support for life challenges.',
-      bgClass: 'bg-vica-beige',
-      textClass: 'text-vica-brown',
-      iconBg: 'bg-white/20'
-    },
-    {
-      id: 5,
-      icon: Users,
-      title: 'Vica Senior',
-      description: 'Specialized wellness programs designed for our senior community members.',
+      title: 'VICA SENIOR',
+      description: 'Specialized wellness programs tailored for our beloved senior community members.',
+      image: '/vica-senior.jpg', // Placeholder - add your image to /public/
       bgClass: 'bg-vica-greenletter',
       textClass: 'text-white',
-      iconBg: 'bg-white/20',
+      buttonClass: 'bg-vica-mint text-vica-greenletter',
       isSpecial: true
-    },
-   
+    }
   ]
 
   return (
-    <section className="py-20 lg:py-28 bg-white">
+    <section className="py-20 lg:py-28 bg-vica-beige">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-vica-brown mb-4 font-rufina">
-            Our Services
+            CARE SOLUTION
           </h2>
-          <p className="text-lg text-vica-brown max-w-3xl mx-auto">
-            Discover our comprehensive wellness services designed to nurture your mind, body, and spirit.
+          <p className="text-lg text-vica-brown max-w-3xl mx-auto leading-relaxed">
+            Explore our range of specialized care services designed to support your wellness journey. 
+            From quick rejuvenation sessions to comprehensive programs, we offer personalized solutions 
+            for every stage of life.
           </p>
         </div>
 
         {/* Services Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {services.map((service, index) => (
             <div
               key={service.id}
-              className={`group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 ${
-                service.isSpecial ? 'ring-2 ring-vica-greenletter' : ''
-              }`}
+              className="group"
               style={{
                 animation: `fadeInUp 0.6s ease-out ${index * 0.1}s both`
               }}
             >
-              {/* Card Background */}
-              <div className={`${service.bgClass} p-8 h-full min-h-[320px] flex flex-col justify-between relative`}>
-                {/* Decorative Circle */}
-                <div className="absolute -top-10 -right-10 w-32 h-32 bg-white/10 rounded-full blur-2xl"></div>
-                
-                {/* Icon */}
-                <div className="relative z-10">
-                  <div className={`w-16 h-16 rounded-full ${service.iconBg} backdrop-blur-sm flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
-                    <service.icon className={`h-8 w-8 ${service.textClass}`} />
+              {/* Card */}
+              <div className={`${service.bgClass} rounded-[30px] overflow-hidden transition-all duration-500 transform hover:-translate-y-2 hover:shadow-xl`}>
+                {/* Image Container */}
+                <div className="relative w-full h-48 bg-gray-300 overflow-hidden rounded-t-[30px]">
+                  {/* Placeholder for image - will show gray until you add actual images */}
+                  <div className="absolute inset-0 flex items-center justify-center text-gray-500 text-sm">
+                    {service.title}
+                    <br />
+                    Image Here
                   </div>
-                  
+                  {/* Uncomment when you add images to /public/
+                  <Image
+                    src={service.image}
+                    alt={service.title}
+                    fill
+                    className="object-cover"
+                  />
+                  */}
+                </div>
+
+                {/* Content */}
+                <div className="p-6 text-center flex flex-col h-full">
                   {/* Title */}
-                  <h3 className={`text-2xl font-bold ${service.textClass} mb-4 font-rufina`}>
+                  <h3 className={`text-lg font-semibold ${service.textClass} mb-3 tracking-wide`}>
                     {service.title}
                   </h3>
                   
                   {/* Description */}
-                  <p className={`${service.textClass} ${service.isSpecial ? 'text-white/90' : 'opacity-90'} leading-relaxed`}>
+                  <p className={`${service.textClass} text-sm mb-6 leading-relaxed ${service.isSpecial ? 'text-white/90' : 'opacity-80'}`}>
                     {service.description}
                   </p>
-                </div>
-
-                {/* Learn More Link */}
-                <div className="relative z-10 mt-6">
-                  <button className={`${service.textClass} font-medium inline-flex items-center group-hover:translate-x-2 transition-transform duration-300`}>
-                    Learn More
-                    <svg 
-                      className="ml-2 w-4 h-4" 
-                      fill="none" 
-                      stroke="currentColor" 
-                      viewBox="0 0 24 24"
-                    >
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                    </svg>
+                  
+                  {/* Button */}
+                  <button className={`${service.buttonClass} px-6 py-2 text-sm font-medium tracking-wide hover:opacity-90 transition-opacity mt-auto`}>
+                    VIEW SERVICE
                   </button>
                 </div>
               </div>

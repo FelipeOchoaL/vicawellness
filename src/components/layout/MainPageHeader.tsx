@@ -3,9 +3,11 @@
 import React, { useState } from 'react'
 import Link from 'next/link'
 import { Menu, X } from 'lucide-react'
+import { motion } from 'motion/react'
 
 const MainPageHeader: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const [hoveredLink, setHoveredLink] = useState<string | null>(null)
 
   const navigation = [
     { name: 'HOME', href: '/' },
@@ -13,6 +15,25 @@ const MainPageHeader: React.FC = () => {
     { name: 'ABOUT', href: '#about' },
     { name: 'CONTACT', href: '#contact' },
   ]
+
+  const handleSmoothScroll = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+    // Only handle hash links
+    if (href.startsWith('#')) {
+      e.preventDefault()
+      const targetId = href.substring(1)
+      const targetElement = document.getElementById(targetId)
+      
+      if (targetElement) {
+        // Use scrollIntoView for better compatibility
+        targetElement.scrollIntoView({
+          behavior: 'smooth',
+          block: 'start',
+        })
+      } else {
+        console.warn(`Element with id "${targetId}" not found`)
+      }
+    }
+  }
 
   return (
     <header className="relative">
@@ -78,9 +99,28 @@ const MainPageHeader: React.FC = () => {
                   <Link
                     key={item.name}
                     href={item.href}
-                    className="text-white/90 hover:text-white px-3 py-2 text-sm font-medium tracking-wide transition-colors"
+                    onClick={(e) => handleSmoothScroll(e, item.href)}
+                    className="relative px-3 py-2 text-sm font-medium tracking-wide group"
+                    onMouseEnter={() => setHoveredLink(item.name)}
+                    onMouseLeave={() => setHoveredLink(null)}
                   >
-                    {item.name}
+                    <span className="relative z-10 text-white/90 group-hover:text-white transition-colors duration-300">
+                      {item.name}
+                    </span>
+                    {/* Underline animation */}
+                    <motion.div
+                      className="absolute bottom-1 left-3 right-3 h-[2px] bg-white"
+                      initial={{ scaleX: 0, opacity: 0 }}
+                      animate={{
+                        scaleX: hoveredLink === item.name ? 1 : 0,
+                        opacity: hoveredLink === item.name ? 1 : 0
+                      }}
+                      transition={{
+                        duration: 0.3,
+                        ease: "easeInOut"
+                      }}
+                      style={{ transformOrigin: 'left' }}
+                    />
                   </Link>
                 ))}
               </nav>
@@ -112,16 +152,27 @@ const MainPageHeader: React.FC = () => {
 
       {/* Mobile Navigation - Full width overlay */}
       {isMenuOpen && (
-        <div className="md:hidden absolute top-24 left-0 right-0 z-20">
+        <motion.div 
+          className="md:hidden absolute top-24 left-0 right-0 z-20"
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+          exit={{ opacity: 0, y: -20 }}
+          transition={{ duration: 0.3, ease: "easeOut" }}
+        >
           <div className="mx-4 px-4 pt-4 pb-6 space-y-2 bg-vica-brown/90 backdrop-blur-sm rounded-lg shadow-lg">
             {navigation.map((item) => (
               <Link
                 key={item.name}
                 href={item.href}
-                className="text-white/90 hover:text-white block px-3 py-2 text-base font-medium tracking-wide"
-                onClick={() => setIsMenuOpen(false)}
+                className="text-white/90 hover:text-white block px-3 py-2 text-base font-medium tracking-wide transition-colors relative group"
+                onClick={(e) => {
+                  handleSmoothScroll(e, item.href)
+                  setIsMenuOpen(false)
+                }}
               >
                 {item.name}
+                {/* Mobile underline */}
+                <span className="absolute bottom-1 left-3 right-3 h-[2px] bg-white scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left" />
               </Link>
             ))}
             <div className="pt-4">
@@ -130,7 +181,7 @@ const MainPageHeader: React.FC = () => {
               </button>
             </div>
           </div>
-        </div>
+        </motion.div>
       )}
     </header>
   )

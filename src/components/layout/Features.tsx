@@ -2,12 +2,15 @@
 
 import React from 'react'
 import Image from 'next/image'
+import Link from 'next/link'
+import { motion } from 'motion/react'
 
 const Features: React.FC = () => {
   const services = [
     {
       id: 1,
       title: 'VICA EXPRESS',
+      slug: 'vica-express',
       description: 'Quick wellness sessions designed for your busy lifestyle. Rejuvenate in under an hour.',
       image: '/vica-express.jpg', // Placeholder - add your image to /public/
       bgClass: 'bg-vica-browncardervices/20',
@@ -17,6 +20,7 @@ const Features: React.FC = () => {
     {
       id: 2,
       title: 'VICA HARMONY',
+      slug: 'vica-harmony',
       description: 'Meditation and mindfulness practices to bring peace and balance to your daily life.',
       image: '/vica-harmony.jpg', // Placeholder - add your image to /public/
       bgClass: 'bg-vica-browncardervices/20',
@@ -26,6 +30,7 @@ const Features: React.FC = () => {
     {
       id: 3,
       title: 'VICA GUIDE',
+      slug: 'vica-guide',
       description: 'Creative art therapy sessions that nurture the soul and encourage self-expression.',
       image: '/vica-guide.jpg', // Placeholder - add your image to /public/
       bgClass: 'bg-vica-browncardervices/20',
@@ -35,6 +40,7 @@ const Features: React.FC = () => {
     {
       id: 4,
       title: 'VICA SENIOR',
+      slug: 'vica-senior',
       description: 'Specialized wellness programs tailored for our beloved senior community members.',
       image: '/vica-senior.jpg', // Placeholder - add your image to /public/
       bgClass: 'bg-vica-greenletter',
@@ -45,10 +51,16 @@ const Features: React.FC = () => {
   ]
 
   return (
-    <section className="py-20 lg:py-28 bg-vica-beige">
+    <section id="services" className="py-20 lg:py-28 bg-vica-beige scroll-mt-24">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
-        <div className="text-center mb-16">
+        <motion.div 
+          className="text-center mb-16"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.6, ease: "easeOut" }}
+        >
           <h2 className="text-3xl md:text-4xl font-bold text-vica-brown mb-4 font-rufina">
             CARE SOLUTION
           </h2>
@@ -57,20 +69,32 @@ const Features: React.FC = () => {
             From quick rejuvenation sessions to comprehensive programs, we offer personalized solutions 
             for every stage of life.
           </p>
-        </div>
+        </motion.div>
 
         {/* Services Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {services.map((service, index) => (
-            <div
+            <motion.div
               key={service.id}
               className="group"
-              style={{
-                animation: `fadeInUp 0.6s ease-out ${index * 0.1}s both`
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-50px" }}
+              transition={{ 
+                duration: 0.5, 
+                delay: index * 0.1,
+                ease: "easeOut"
               }}
             >
               {/* Card */}
-              <div className={`${service.bgClass} rounded-[30px] overflow-hidden transition-all duration-500 transform hover:-translate-y-2 hover:shadow-xl`}>
+              <motion.div 
+                className={`${service.bgClass} rounded-[30px] overflow-hidden transition-all duration-300`}
+                whileHover={{ 
+                  y: -8,
+                  transition: { duration: 0.3, ease: "easeOut" }
+                }}
+                whileTap={{ scale: 0.98 }}
+              >
                 {/* Image Container */}
                 <div className="relative w-full h-48 bg-gray-300 overflow-hidden rounded-t-[30px]">
                   {/* Placeholder for image - will show gray until you add actual images */}
@@ -102,29 +126,18 @@ const Features: React.FC = () => {
                   </p>
                   
                   {/* Button */}
-                  <button className={`${service.buttonClass} px-6 py-2 text-sm font-medium tracking-wide hover:opacity-90 transition-opacity mt-auto`}>
+                  <Link 
+                    href={`/services/${service.slug}`}
+                    className={`${service.buttonClass} px-6 py-2 text-sm font-medium tracking-wide hover:opacity-90 transition-opacity mt-auto inline-block rounded-md`}
+                  >
                     VIEW SERVICE
-                  </button>
+                  </Link>
                 </div>
-              </div>
-            </div>
+              </motion.div>
+            </motion.div>
           ))}
         </div>
       </div>
-
-      {/* Add keyframe animation */}
-      <style jsx>{`
-        @keyframes fadeInUp {
-          from {
-            opacity: 0;
-            transform: translateY(30px);
-          }
-          to {
-            opacity: 1;
-            transform: translateY(0);
-          }
-        }
-      `}</style>
     </section>
   )
 }

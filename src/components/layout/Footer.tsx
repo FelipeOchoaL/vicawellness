@@ -8,10 +8,10 @@ const Footer: React.FC = () => {
   const [email, setEmail] = useState('')
 
   const services = [
-    { name: 'Vica Express', href: '#' },
-    { name: 'Vica Harmony', href: '#' },
-    { name: 'Vica Guide', href: '#' },
-    { name: 'Vica Senior', href: '#' },
+    { name: 'Vica Express', href: '/services/vica-express' },
+    { name: 'Vica Harmony', href: '/services/vica-harmony' },
+    { name: 'Vica Guide', href: '/services/vica-guide' },
+    { name: 'Vica Senior', href: '/services/vica-senior' },
   ]
 
   const webpages = [
@@ -29,7 +29,7 @@ const Footer: React.FC = () => {
   }
 
   return (
-    <footer className="bg-vica-brown text-white">
+    <footer id="contact" className="bg-vica-brown text-white scroll-mt-24">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
           {/* Logo and Social Media */}
@@ -73,9 +73,11 @@ const Footer: React.FC = () => {
                 <li key={link.name}>
                   <Link 
                     href={link.href}
-                    className="text-white/90 hover:text-white transition-colors"
+                    className="relative text-white/90 hover:text-white transition-colors group inline-block"
                   >
                     {link.name}
+                    {/* Underline animation */}
+                    <span className="absolute bottom-0 left-0 right-0 h-[2px] bg-white scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left" />
                   </Link>
                 </li>
               ))}
@@ -90,9 +92,11 @@ const Footer: React.FC = () => {
                 <li key={link.name}>
                   <Link 
                     href={link.href}
-                    className="text-white/90 hover:text-white transition-colors"
+                    className="relative text-white/90 hover:text-white transition-colors group inline-block"
                   >
                     {link.name}
+                    {/* Underline animation */}
+                    <span className="absolute bottom-0 left-0 right-0 h-[2px] bg-white scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left" />
                   </Link>
                 </li>
               ))}
@@ -124,10 +128,12 @@ const Footer: React.FC = () => {
         <div className="border-t border-white/20 pt-6">
           <div className="flex justify-end">
             <Link 
-              href="#" 
-              className="text-white/90 hover:text-white transition-colors"
+              href="/services/terms-conditions" 
+              className="relative text-white/90 hover:text-white transition-colors group inline-block"
             >
               Terms And Conditions
+              {/* Underline animation */}
+              <span className="absolute bottom-0 left-0 right-0 h-[2px] bg-white scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left" />
             </Link>
           </div>
         </div>

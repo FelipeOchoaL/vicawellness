@@ -9,16 +9,6 @@ const Features: React.FC = () => {
   const services = [
     {
       id: 1,
-      title: 'VICA EXPRESS',
-      slug: 'vica-express',
-      description: 'Quick wellness sessions designed for your busy lifestyle. Rejuvenate in under an hour.',
-      image: '/vica-express.jpg', // Placeholder - add your image to /public/
-      bgClass: 'bg-vica-browncardervices/20',
-      textClass: 'text-vica-brown',
-      buttonClass: 'bg-vica-mint text-vica-greenletter'
-    },
-    {
-      id: 2,
       title: 'VICA HARMONY',
       slug: 'vica-harmony',
       description: 'Meditation and mindfulness practices to bring peace and balance to your daily life.',
@@ -28,7 +18,7 @@ const Features: React.FC = () => {
       buttonClass: 'bg-vica-mint text-vica-greenletter'
     },
     {
-      id: 3,
+      id: 2,
       title: 'VICA GUIDE',
       slug: 'vica-guide',
       description: 'Creative art therapy sessions that nurture the soul and encourage self-expression.',
@@ -38,15 +28,14 @@ const Features: React.FC = () => {
       buttonClass: 'bg-vica-mint text-vica-greenletter'
     },
     {
-      id: 4,
+      id: 3,
       title: 'VICA SENIOR',
       slug: 'vica-senior',
       description: 'Specialized wellness programs tailored for our beloved senior community members.',
       image: '/vica-senior.jpg', // Placeholder - add your image to /public/
-      bgClass: 'bg-vica-greenletter',
-      textClass: 'text-white',
-      buttonClass: 'bg-vica-mint text-vica-greenletter',
-      isSpecial: true
+      bgClass: 'bg-vica-browncardervices/20',
+      textClass: 'text-vica-brown',
+      buttonClass: 'bg-vica-mint text-vica-greenletter'
     }
   ]
 
@@ -72,7 +61,7 @@ const Features: React.FC = () => {
         </motion.div>
 
         {/* Services Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {services.map((service, index) => (
             <motion.div
               key={service.id}
@@ -91,7 +80,7 @@ const Features: React.FC = () => {
                 className={`${service.bgClass} rounded-[30px] overflow-hidden transition-all duration-300`}
                 whileHover={{ 
                   y: -8,
-                  transition: { duration: 0.3, ease: "easeOut" }
+                  transition: { duration: 0.1, ease: "easeOut" }
                 }}
                 whileTap={{ scale: 0.98 }}
               >
@@ -121,7 +110,7 @@ const Features: React.FC = () => {
                   </h3>
                   
                   {/* Description */}
-                  <p className={`${service.textClass} text-sm mb-6 leading-relaxed ${service.isSpecial ? 'text-white/90' : 'opacity-80'}`}>
+                  <p className={`${service.textClass} text-sm mb-6 leading-relaxed opacity-80`}>
                     {service.description}
                   </p>
                   

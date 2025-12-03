@@ -5,7 +5,7 @@ import MainPageHeader from '@/components/layout/MainPageHeader'
 import Footer from '@/components/layout/Footer'
 
 export const metadata: Metadata = {
-  title: 'Vica Guide | VicaWellness',
+  title: 'Vica Support | VicaWellness',
   description: 'Creative art therapy sessions that nurture the soul and encourage self-expression.',
 }
 
@@ -113,7 +113,7 @@ export default function VicaGuidePage() {
               <div>
                 <h1 className="text-5xl md:text-6xl font-bold mb-2 font-rufina">
                   <span className="text-vica-green">VICA</span>{' '}
-                  <span className="text-vica-brown">GUIDE</span>
+                  <span className="text-vica-brown">SUPPORT</span>
                 </h1>
                 <p className="text-xl md:text-2xl text-vica-brown italic mt-2">
                   Express yourself, heal your soul
@@ -123,7 +123,7 @@ export default function VicaGuidePage() {
               {/* Description */}
               <div className="space-y-4">
                 <p className="text-vica-brown leading-relaxed">
-                  Vica Guide offers creative art therapy sessions that nurture your soul and encourage 
+                  Vica Support offers creative art therapy sessions that nurture your soul and encourage 
                   self-expression. Through various artistic mediums, we guide you on a journey of 
                   self-discovery, emotional healing, and personal growth. Art becomes your language 
                   for expressing what words cannot capture.
@@ -167,7 +167,7 @@ export default function VicaGuidePage() {
                 <p className="text-vica-brown leading-relaxed">
                   Our art therapy sessions are designed to help you explore your inner world through 
                   creative expression. Whether you&apos;re an experienced artist or have never picked 
-                  up a brush, Vica Guide provides a safe, supportive space for healing and growth. 
+                  up a brush, Vica Support provides a safe, supportive space for healing and growth. 
                   We work with individuals and groups, using various artistic mediums to facilitate 
                   your wellness journey.
                 </p>

@@ -19,7 +19,7 @@ const Features: React.FC = () => {
     },
     {
       id: 2,
-      title: 'VICA GUIDE',
+      title: 'VICA SUPPORT',
       slug: 'vica-guide',
       description: 'Creative art therapy sessions that nurture the soul and encourage self-expression.',
       image: '/vica-guide.jpg', // Placeholder - add your image to /public/

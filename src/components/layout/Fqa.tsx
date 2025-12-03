@@ -26,7 +26,7 @@ const Fqa: React.FC = () => {
     {
       id: 4,
       question: 'How long is each session?',
-      answer: 'Session lengths vary by service type. Vica Express sessions are designed for busy schedules (30-45 minutes), while comprehensive programs like Vica Harmony and Vica Guide typically run 60-90 minutes. We can customize session lengths to fit your needs.'
+      answer: 'Session lengths vary by service type. Vica Express sessions are designed for busy schedules (30-45 minutes), while comprehensive programs like Vica Harmony and Vica Support typically run 60-90 minutes. We can customize session lengths to fit your needs.'
     },
     {
       id: 5,

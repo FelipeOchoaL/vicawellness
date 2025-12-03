@@ -10,7 +10,7 @@ const Footer: React.FC = () => {
   const services = [
     { name: 'Vica Express', href: '/services/vica-express' },
     { name: 'Vica Harmony', href: '/services/vica-harmony' },
-    { name: 'Vica Guide', href: '/services/vica-guide' },
+    { name: 'Vica Support', href: '/services/vica-guide' },
     { name: 'Vica Senior', href: '/services/vica-senior' },
   ]
 

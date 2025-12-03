@@ -21,7 +21,7 @@ const MainPageHeader: React.FC = () => {
   const servicesDropdown = [
     { name: 'VICA HARMONY', href: '/services/vica-harmony', description: 'Meditation and mindfulness practices' },
     { name: 'VICA SENIOR', href: '/services/vica-senior', description: 'Specialized wellness programs' },
-    { name: 'VICA GUIDE', href: '/services/vica-guide', description: 'Creative art therapy sessions' },
+    { name: 'VICA SUPPORT', href: '/services/vica-guide', description: 'Creative art therapy sessions' },
   ]
 
   const handleMouseEnterServices = () => {

@@ -140,129 +140,132 @@ export default function VicaSeniorPage() {
           </div>
         </section>
 
-        {/* OUR SERVICES Header Bar */}
-        <div className="bg-vica-brown py-6">
-          <h2 className="text-3xl md:text-4xl font-bold text-center text-white font-rufina tracking-wide">
-            OUR SERVICES
-          </h2>
-        </div>
-
-        {/* SECTION 2: Three Circular Service Cards - Beige Background */}
-        <section className="bg-vica-beige py-16 lg:py-20">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12">
-              
-              {/* Service Card 1: Creative Activities */}
-              <motion.div
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.1 }}
-                viewport={{ once: true }}
-                className="flex flex-col items-center text-center"
-              >
-                {/* Circular Image */}
-                <div className="relative w-40 h-40 mb-6 rounded-full overflow-hidden shadow-lg bg-vica-mint">
-                  <div className="absolute inset-0 flex items-center justify-center text-vica-brown text-xs p-4">
-                    Art materials
-                  </div>
-                  {/* Uncomment when you add actual images
-                  <Image
-                    src="/service-art.jpg"
-                    alt="Creative art activities"
-                    fill
-                    className="object-cover"
-                  />
-                  */}
-                </div>
-                
-                {/* Content */}
-                <div className="space-y-3">
-                  <p className="text-vica-brown text-sm leading-relaxed">
-                    Creative activities using a variety of art materials.
-                  </p>
-                  <ul className="text-vica-brown text-xs space-y-1">
-                    <li>• Encourage self-expression</li>
-                    <li>• Stimulate imagination</li>
-                    <li>• Inspire hope</li>
-                    <li>• A safe space for people</li>
-                  </ul>
-                </div>
-              </motion.div>
-
-              {/* Service Card 2: Musical Activities */}
-              <motion.div
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.2 }}
-                viewport={{ once: true }}
-                className="flex flex-col items-center text-center"
-              >
-                {/* Circular Image */}
-                <div className="relative w-40 h-40 mb-6 rounded-full overflow-hidden shadow-lg bg-vica-mint">
-                  <div className="absolute inset-0 flex items-center justify-center text-vica-brown text-xs p-4">
-                    Musical instruments
-                  </div>
-                  {/* Uncomment when you add actual images
-                  <Image
-                    src="/service-music.jpg"
-                    alt="Musical activities"
-                    fill
-                    className="object-cover"
-                  />
-                  */}
-                </div>
-                
-                {/* Content */}
-                <div className="space-y-3">
-                  <p className="text-vica-brown text-sm leading-relaxed">
-                    Musical activities with simple instruments and music from past decades.
-                  </p>
-                  <ul className="text-vica-brown text-xs space-y-1">
-                    <li>• Stimulate memory</li>
-                    <li>• Encourage body movement</li>
-                    <li>• <em>Recommended for people with Alzheimer&apos;s or any type of dementia</em></li>
-                  </ul>
-                </div>
-              </motion.div>
-
-              {/* Service Card 3: Care Sessions */}
-              <motion.div
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.3 }}
-                viewport={{ once: true }}
-                className="flex flex-col items-center text-center"
-              >
-                {/* Circular Image */}
-                <div className="relative w-40 h-40 mb-6 rounded-full overflow-hidden shadow-lg bg-vica-mint">
-                  <div className="absolute inset-0 flex items-center justify-center text-vica-brown text-xs p-4">
-                    Essential oils
-                  </div>
-                  {/* Uncomment when you add actual images
-                  <Image
-                    src="/service-care.jpg"
-                    alt="Care sessions"
-                    fill
-                    className="object-cover"
-                  />
-                  */}
-                </div>
-                
-                {/* Content */}
-                <div className="space-y-3">
-                  <p className="text-vica-brown text-sm leading-relaxed">
-                    Sesiones de cariño a través de sonidos relajantes y aceites esenciales.
-                  </p>
-                  <ul className="text-vica-brown text-xs space-y-1">
-                    <li>• Contribuyen a la relajación y disminución de la ansiedad</li>
-                    <li>• Mejoran el estado de ánimo</li>
-                    <li>• <em>Recomendamos para reajuste de patrones de sueño</em></li>
-                  </ul>
-                </div>
-              </motion.div>
-            </div>
+        {/* OUR SERVICES Section with Overlapping Circles */}
+        <div className="relative">
+          {/* Brown Header Bar - Much Larger to go through middle of circles */}
+          <div className="bg-vica-brown py-20 md:py-24">
+            <h2 className="text-3xl md:text-4xl font-bold text-center text-vica-mint font-rufina tracking-wide">
+              OUR SERVICES
+            </h2>
           </div>
-        </section>
+
+          {/* SECTION 2: Three Circular Service Cards - Beige Background */}
+          <section className="bg-vica-beige pt-24 pb-16 lg:pb-20">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12">
+                
+                {/* Service Card 1: Creative Activities */}
+                <motion.div
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: 0.1 }}
+                  viewport={{ once: true }}
+                  className="flex flex-col items-center text-center -mt-44"
+                >
+                  {/* Circular Image with Brown Border */}
+                  <div className="relative w-44 h-44 mb-6 rounded-full overflow-hidden shadow-lg bg-vica-mint border-8 border-vica-brown">
+                    <div className="absolute inset-0 flex items-center justify-center text-vica-brown text-xs p-4">
+                      Art materials
+                    </div>
+                    {/* Uncomment when you add actual images
+                    <Image
+                      src="/service-art.jpg"
+                      alt="Creative art activities"
+                      fill
+                      className="object-cover"
+                    />
+                    */}
+                  </div>
+                  
+                  {/* Content */}
+                  <div className="space-y-3">
+                    <p className="text-vica-brown text-sm leading-relaxed">
+                      Creative activities using a variety of art materials.
+                    </p>
+                    <ul className="text-vica-brown text-xs space-y-1">
+                      <li>• Encourage self-expression</li>
+                      <li>• Stimulate imagination</li>
+                      <li>• Inspire hope</li>
+                      <li>• A safe space for people</li>
+                    </ul>
+                  </div>
+                </motion.div>
+
+                {/* Service Card 2: Musical Activities */}
+                <motion.div
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: 0.2 }}
+                  viewport={{ once: true }}
+                  className="flex flex-col items-center text-center -mt-44"
+                >
+                  {/* Circular Image with Brown Border */}
+                  <div className="relative w-44 h-44 mb-6 rounded-full overflow-hidden shadow-lg bg-vica-mint border-8 border-vica-brown">
+                    <div className="absolute inset-0 flex items-center justify-center text-vica-brown text-xs p-4">
+                      Musical instruments
+                    </div>
+                    {/* Uncomment when you add actual images
+                    <Image
+                      src="/service-music.jpg"
+                      alt="Musical activities"
+                      fill
+                      className="object-cover"
+                    />
+                    */}
+                  </div>
+                  
+                  {/* Content */}
+                  <div className="space-y-3">
+                    <p className="text-vica-brown text-sm leading-relaxed">
+                      Musical activities with simple instruments and music from past decades.
+                    </p>
+                    <ul className="text-vica-brown text-xs space-y-1">
+                      <li>• Stimulate memory</li>
+                      <li>• Encourage body movement</li>
+                      <li>• <em>Recommended for people with Alzheimer&apos;s or any type of dementia</em></li>
+                    </ul>
+                  </div>
+                </motion.div>
+
+                {/* Service Card 3: Care Sessions */}
+                <motion.div
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: 0.3 }}
+                  viewport={{ once: true }}
+                  className="flex flex-col items-center text-center -mt-44"
+                >
+                  {/* Circular Image with Brown Border */}
+                  <div className="relative w-44 h-44 mb-6 rounded-full overflow-hidden shadow-lg bg-vica-mint border-8 border-vica-brown">
+                    <div className="absolute inset-0 flex items-center justify-center text-vica-brown text-xs p-4">
+                      Essential oils
+                    </div>
+                    {/* Uncomment when you add actual images
+                    <Image
+                      src="/service-care.jpg"
+                      alt="Care sessions"
+                      fill
+                      className="object-cover"
+                    />
+                    */}
+                  </div>
+                  
+                  {/* Content */}
+                  <div className="space-y-3">
+                    <p className="text-vica-brown text-sm leading-relaxed">
+                      Sesiones de cariño a través de sonidos relajantes y aceites esenciales.
+                    </p>
+                    <ul className="text-vica-brown text-xs space-y-1">
+                      <li>• Contribuyen a la relajación y disminución de la ansiedad</li>
+                      <li>• Mejoran el estado de ánimo</li>
+                      <li>• <em>Recomendamos para reajuste de patrones de sueño</em></li>
+                    </ul>
+                  </div>
+                </motion.div>
+              </div>
+            </div>
+          </section>
+        </div>
 
         {/* SECTION 3: Sessions & Benefits - Beige Background, Content Left, Images Right */}
         <section className="bg-vica-beige py-16 lg:py-20">

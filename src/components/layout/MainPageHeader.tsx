@@ -65,7 +65,7 @@ const MainPageHeader: React.FC = () => {
         {/* Left Section - Brown with opacity */}
         <div className="w-1/2 relative">
           <div className="absolute inset-0 bg-vica-mint"></div>
-          <div className="absolute inset-0 bg-vica-brown/75"></div>
+          <div className="absolute inset-0 bg-vica-brown2"></div>
           <div className="relative z-10 px-4 sm:px-6 lg:px-8">
             <div className="flex justify-start items-center h-24">
               {/* Logo */}
@@ -113,7 +113,7 @@ const MainPageHeader: React.FC = () => {
               backgroundImage: "url('/wellness-bg.jpg')"
             }}
           ></div>
-          <div className="absolute inset-0 bg-vica-brown/75"></div>
+          <div className="absolute inset-0 bg-vica-brown2/75"></div>
           <div className="relative z-10 px-4 sm:px-6 lg:px-8">
             <div className="flex justify-end items-center h-24">
               {/* Desktop Navigation */}

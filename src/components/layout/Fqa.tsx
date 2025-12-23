@@ -40,7 +40,7 @@ const Fqa: React.FC = () => {
   }
 
   return (
-    <section className="py-20 lg:py-28 bg-vica-mint">
+    <section className="py-20 lg:py-28 bg-vica-beige_claro">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <motion.div 
@@ -50,10 +50,10 @@ const Fqa: React.FC = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <h2 className="text-3xl md:text-4xl font-bold text-vica-brown mb-4 font-rufina">
+          <h2 className="text-3xl md:text-4xl font-bold text-vica-brown2 mb-4 font-rufina">
             Frequently Asked Questions
           </h2>
-          <p className="text-lg text-vica-brown/80">
+          <p className="text-lg text-vica-brown2">
             Everything you need to know about our wellness services
           </p>
         </motion.div>
@@ -82,7 +82,7 @@ const Fqa: React.FC = () => {
                 >
                   {/* Number Badge */}
                   <div className="flex-shrink-0 w-8 h-8 rounded-full bg-vica-beige flex items-center justify-center">
-                    <span className="text-vica-brown font-semibold text-sm">
+                    <span className="text-vica-brown2 font-semibold text-lg">
                       {faq.id}
                     </span>
                   </div>
@@ -96,7 +96,7 @@ const Fqa: React.FC = () => {
 
                   {/* Toggle Icon */}
                   <motion.div
-                    className="flex-shrink-0 w-8 h-8 rounded-full bg-vica-greenletter flex items-center justify-center"
+                    className="flex-shrink-0 w-8 h-8 rounded-full bg-vica-brown2 flex items-center justify-center"
                     animate={{ rotate: expandedIndex === index ? 180 : 0 }}
                     transition={{ duration: 0.3 }}
                   >
@@ -117,7 +117,7 @@ const Fqa: React.FC = () => {
                       exit={{ height: 0, opacity: 0 }}
                       transition={{ duration: 0.3, ease: 'easeInOut' }}
                     >
-                      <div className="px-6 md:px-8 pb-6 pl-16 md:pl-20">
+                      <div className="text-lg px-6 md:px-8 pb-6 pl-16 md:pl-20">
                         <motion.p
                           initial={{ opacity: 0, y: -10 }}
                           animate={{ opacity: 1, y: 0 }}
@@ -144,9 +144,9 @@ const Fqa: React.FC = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.5 }}
         >
-          <p className="text-vica-brown mb-4">Still have questions?</p>
+          <p className="text-lg text-vica-brown2 mb-4">Still have questions?</p>
           <motion.button
-            className="bg-vica-greenletter text-white px-8 py-3 rounded-full font-medium hover:bg-vica-greenletter/90 transition-colors"
+            className="text-lg bg-vica-green2_claro text-beige_claro px-8 py-3 rounded-full font-medium hover:bg-vica-greenletter/90 transition-colors"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >

@@ -1,7 +1,7 @@
 import { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
-import MainPageHeader from '@/components/layout/MainPageHeader'
+import Header from '@/components/layout/Header'
 import Footer from '@/components/layout/Footer'
 
 export const metadata: Metadata = {
@@ -15,7 +15,7 @@ export default function VicaGuidePage() {
       <div className="relative">
         {/* Header positioned absolutely over the Hero */}
         <div className="absolute top-0 left-0 right-0 z-20">
-          <MainPageHeader />
+          <Header />
         </div>
       </div>
       

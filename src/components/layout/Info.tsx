@@ -46,7 +46,7 @@ const Info: React.FC = () => {
   ]
 
   return (
-    <section className="bg-vica-beige py-16 lg:py-24">
+    <section className="bg-vica-beige2 py-16 lg:py-24 scroll-mt-24">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12">
           {services.map((service) => (
@@ -57,12 +57,12 @@ const Info: React.FC = () => {
               </div>
               
               {/* Title */}
-              <h3 className="text-base md:text-lg text-vica-brown mb-8 px-4 min-h-[60px] flex items-center">
+              <h3 className="text-lg md:text-lg text-vica-brown2 mb-8 px-4 min-h-[60px] flex items-center">
                 {service.title}
               </h3>
               
               {/* CTA Button */}
-              <button className="bg-vica-mint text-vica-greenletter px-8 py-2 text-sm font-medium tracking-wide hover:bg-vica-mint/90 transition-colors">
+              <button className="bg-vica-green2_claro text-vica-beige_claro px-8 py-2 text-sm font-medium tracking-wide hover:bg-vica-green2 transition-colors">
                 VIEW SERVICE
               </button>
             </div>

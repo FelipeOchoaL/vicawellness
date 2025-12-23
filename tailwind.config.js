@@ -38,8 +38,16 @@ module.exports = {
           brown: '#946A45', 
           beige: '#CFC8B6',
           green: '#408775',
-          greenletter: '#3A6D60',
+          greenletter: '#3A6D60', //3A6D60
           browncardervices: '#88694B',
+          //nuevos tonos
+          beige2: '#CFC8B6', //D9D4C3
+          beige_claro: '#FFFBF5',//F5F2E7
+          green2: '#144B39', //3A6D60
+          green2_claro: '#528275',
+          green2_masclaro: '#7FB9A7',
+          brown2: '#946945', 
+
           50: '#C4E3DA',
           100: '#ede3d8',
           200: '#dbc7b1',

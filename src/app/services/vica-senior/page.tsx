@@ -4,7 +4,7 @@ import { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
 import { motion } from 'motion/react'
-import MainPageHeader from '@/components/layout/MainPageHeader'
+import Header from '@/components/layout/Header'
 import Footer from '@/components/layout/Footer'
 
 export default function VicaSeniorPage() {
@@ -13,7 +13,7 @@ export default function VicaSeniorPage() {
       <div className="relative">
         {/* Header positioned absolutely over the Hero */}
         <div className="absolute top-0 left-0 right-0 z-20">
-          <MainPageHeader />
+          <Header />
         </div>
       </div>
       
@@ -45,10 +45,10 @@ export default function VicaSeniorPage() {
 
                 {/* Description */}
                 <div>
-                  <p className="text-vica-brown leading-relaxed text-base mb-4">
+                  <p className="text-vica-brown leading-relaxed text-lg mb-4">
                     Vica Guide accompanies you through meaningful moments in your life — times of loss, transition, and the search for purpose.
                   </p>
-                  <p className="text-vica-brown leading-relaxed text-base">
+                  <p className="text-vica-brown leading-relaxed text-lg">
                     Through self-awareness tools such as coaching, the Enneagram, transpersonal grief work, and art therapy, you&apos;ll find a path toward clarity, inner strength, and calm.
                   </p>
                 </div>

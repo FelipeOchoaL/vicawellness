@@ -26,7 +26,7 @@ const Opinions: React.FC = () => {
   ]
 
   return (
-    <section className="py-20 lg:py-28 bg-vica-beige">
+    <section className="py-20 lg:py-28 bg-vica-beige2">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Title */}
         <div className="text-center mb-16">
@@ -40,7 +40,7 @@ const Opinions: React.FC = () => {
           {testimonials.map((testimonial) => (
             <div
               key={testimonial.id}
-              className="bg-vica-mint rounded-[40px] p-10 relative flex flex-col min-h-[280px] shadow-md hover:shadow-xl transition-shadow duration-300"
+              className="bg-vica-beige_claro rounded-[40px] p-10 relative flex flex-col min-h-[280px] shadow-md hover:shadow-xl transition-shadow duration-300"
             >
               {/* Quote Icon */}
               <div className="mb-6">
@@ -59,13 +59,13 @@ const Opinions: React.FC = () => {
               </div>
 
               {/* Testimonial Text */}
-              <p className="text-vica-brown mb-10 leading-relaxed flex-grow text-base">
+              <p className="text-lg text-vica-brown2 mb-10 leading-relaxed flex-grow">
                 {testimonial.text}
               </p>
 
               {/* Name and Stars */}
               <div className="mt-auto space-y-3">
-                <h4 className="text-vica-brown font-semibold text-lg">
+                <h4 className="text-vica-brown2 font-semibold text-lg">
                   {testimonial.name}
                 </h4>
                 

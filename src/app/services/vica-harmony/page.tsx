@@ -4,7 +4,7 @@ import { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
 import { motion } from 'motion/react'
-import MainPageHeader from '@/components/layout/MainPageHeader'
+import Header from '@/components/layout/Header'
 import Footer from '@/components/layout/Footer'
 
 export default function VicaHarmonyPage() {
@@ -13,7 +13,7 @@ export default function VicaHarmonyPage() {
       <div className="relative">
         {/* Header positioned absolutely over the Hero */}
         <div className="absolute top-0 left-0 right-0 z-20">
-          <MainPageHeader />
+          <Header />
         </div>
       </div>
       

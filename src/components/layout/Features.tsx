@@ -13,17 +13,17 @@ const Features: React.FC = () => {
       slug: 'vica-harmony',
       description: 'Meditation and mindfulness practices to bring peace and balance to your daily life.',
       image: '/vica-harmony.jpg', // Placeholder - add your image to /public/
-      bgClass: 'bg-vica-brown2/20',
+      bgClass: 'bg-vica-browncardervices/20',
       textClass: 'text-vica-brown',
       buttonClass: 'bg-vica-mint text-vica-greenletter'
     },
     {
       id: 2,
-      title: 'VICA SUPPORT',
+      title: 'VICA GUIDE',
       slug: 'vica-guide',
       description: 'Creative art therapy sessions that nurture the soul and encourage self-expression.',
       image: '/vica-guide.jpg', // Placeholder - add your image to /public/
-      bgClass: 'bg-vica-brown2/20',
+      bgClass: 'bg-vica-browncardervices/20',
       textClass: 'text-vica-brown',
       buttonClass: 'bg-vica-mint text-vica-greenletter'
     },
@@ -33,7 +33,7 @@ const Features: React.FC = () => {
       slug: 'vica-senior',
       description: 'Specialized wellness programs tailored for our beloved senior community members.',
       image: '/vica-senior.jpg', // Placeholder - add your image to /public/
-      bgClass: 'bg-vica-brown2/20',
+      bgClass: 'bg-vica-browncardervices/20',
       textClass: 'text-vica-brown',
       buttonClass: 'bg-vica-mint text-vica-greenletter'
     }
@@ -50,10 +50,10 @@ const Features: React.FC = () => {
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.6, ease: "easeOut" }}
         >
-          <h2 className="text-3xl md:text-4xl font-bold text-vica-brown2 mb-4 font-rufina">
+          <h2 className="text-3xl md:text-4xl font-bold text-vica-brown mb-4 font-rufina">
             CARE SOLUTION
           </h2>
-          <p className="text-lg text-vica-brown2 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-lg text-vica-brown max-w-3xl mx-auto leading-relaxed">
             Explore our range of specialized care services designed to support your wellness journey. 
             From quick rejuvenation sessions to comprehensive programs, we offer personalized solutions 
             for every stage of life.
@@ -110,14 +110,14 @@ const Features: React.FC = () => {
                   </h3>
                   
                   {/* Description */}
-                  <p className={`${service.textClass} text-lg mb-6 leading-relaxed opacity-80`}>
+                  <p className={`${service.textClass} text-sm mb-6 leading-relaxed opacity-80`}>
                     {service.description}
                   </p>
                   
                   {/* Button */}
                   <Link 
                     href={`/services/${service.slug}`}
-                    className={`${service.buttonClass} px-6 py-2 text-sm font-medium tracking-wide hover:opacity-90 transition-opacity mt-auto inline-block rounded-md`}
+                    className={`${service.buttonClass} bg-vica-green2 px-6 py-2 text-sm font-medium tracking-wide hover:opacity-90 transition-opacity mt-auto inline-block rounded-md`}
                   >
                     VIEW SERVICE
                   </Link>

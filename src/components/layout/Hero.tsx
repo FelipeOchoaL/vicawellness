@@ -11,13 +11,13 @@ const Hero: React.FC = () => {
         <div className="relative z-10 flex items-center justify-center min-h-screen px-4 sm:px-6 lg:px-8">
           <div className="max-w-lg">
             {/* Hero Content */}
-            <h1 className="text-4xl md:text-5xl font-bold text-vica-green2 mb-4 font-rufina">
+            <h1 className="text-4xl md:text-5xl font-bold text-vica-brown2 mb-4 font-rufina">
               VICA WELLNESS
             </h1>
-            <p className="text-xl font-bold text-vica-green2 mb-6 font-rufina">
+            <p className="text-xl font-bold text-vica-brown2 mb-6 font-rufina">
               By Luz Elvira Coach
             </p>
-            <p className="text-lg text-vica-green2 mb-8 leading-relaxed">
+            <p className="text-lg text-vica-brown2 mb-8 leading-relaxed">
               At Vica Wellness, we provide comprehensive and 
               holistic well-being services that embrace 
               mental, emotional, physical, and spiritual 
@@ -26,7 +26,7 @@ const Hero: React.FC = () => {
             </p>
             
             {/* CTA Button */}
-            <Button size="lg" className="text-base px-8 bg-vica-green2_claro hover:bg-vica-green2 text-vica-beige_claro font-semibold">
+            <Button size="lg" className="text-beige_claro px-8 bg-vica-green2 hover:bg-vica-green2_oscuro text-vica-beige_claro font-semibold">
               EXPLORE NOW
             </Button>
           </div>

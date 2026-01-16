@@ -3,6 +3,7 @@
 import React, { useState } from 'react'
 import Link from 'next/link'
 import { Facebook, Twitter, Instagram } from 'lucide-react'
+import { link } from 'fs'
 
 const Footer: React.FC = () => {
   const [email, setEmail] = useState('')
@@ -16,7 +17,7 @@ const Footer: React.FC = () => {
 
   const webpages = [
     { name: 'Home', href: '#' },
-    { name: 'Services', href: '#' },
+    { name: 'Services', href: '#Features' },
     { name: 'About', href: '#' },
     { name: 'Contact', href: '#' },
     { name: 'Gallery', href: '#' },
@@ -56,12 +57,14 @@ const Footer: React.FC = () => {
               >
                 <Twitter className="w-5 h-5" />
               </Link>
-              <Link 
-                href="#" 
+              <a
+                href="https://www.instagram.com/vica_wellness?igsh=MWNucWM0NWMyb2dxdA=="
+                target="_blank"
+                rel="noopener noreferrer"
                 className="w-10 h-10 border border-white/40 rounded flex items-center justify-center hover:bg-white/10 transition-colors"
-              >
+>
                 <Instagram className="w-5 h-5" />
-              </Link>
+              </a>
             </div>
           </div>
 
@@ -69,7 +72,7 @@ const Footer: React.FC = () => {
           <div>
             <h3 className="text-lg font-semibold mb-6 tracking-wide">SERVICES</h3>
             <ul className="space-y-3">
-              {services.map((link) => (
+              {services.filter(link => link.name !== 'Vica Express').map((link) => (
                 <li key={link.name}>
                   <Link 
                     href={link.href}

@@ -19,7 +19,7 @@ export default function VicaHarmonyPage() {
       
       <main className="pt-24">
         {/* SECTION 1: VICA HARMONY - Beige Background, Images Left, Content Right */}
-        <section className="bg-vica-beige min-h-screen py-16 lg:py-24">
+        <section className="bg-vica-beige2 min-h-screen py-16 lg:py-24">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-start">
               
@@ -106,26 +106,26 @@ export default function VicaHarmonyPage() {
                 {/* Title */}
                 <div>
                   <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-3 font-rufina leading-tight">
-                    <span className="text-vica-green">VICA</span>
+                    <span className="text-vica-green2_claro">VICA</span>
                     <br />
-                    <span className="text-vica-brown">HARMONY</span>
+                    <span className="text-vica-brown2">HARMONY</span>
                   </h1>
-                  <p className="text-xl md:text-2xl text-vica-brown/80 italic mt-4">
+                  <p className="text-xl md:text-2xl text-vica-brown2/80 italic mt-4">
                     "let sound guide you back to calm"
                   </p>
                 </div>
 
                 {/* Description */}
                 <div>
-                  <p className="text-vica-brown leading-relaxed text-base">
+                  <p className="text-vica-brown2 leading-relaxed text-lg">
                     Sound healing is a wellness practice that uses sound and vibration, such as those from crystal bowls and ancestral instruments to harmonize the body, mind, and emotions. Through specific frequencies, it helps balance the body&apos;s energy centers (chakras), reduce stress, and mood and promote deep, restorative relaxation.
                   </p>
                 </div>
 
                 {/* Benefits Section */}
                 <div>
-                  <h2 className="text-2xl font-bold text-vica-brown font-rufina mb-4">BENEFITS</h2>
-                  <ul className="space-y-2 text-vica-brown text-sm">
+                  <h2 className="text-2xl font-bold text-vica-brown2 font-rufina mb-4">BENEFITS</h2>
+                  <ul className="space-y-2 text-vica-brown2 text-lg">
                     <li className="flex items-start">
                       <span className="mr-3 mt-1">•</span>
                       <span>Reduces stress & anxiety</span>
@@ -151,11 +151,11 @@ export default function VicaHarmonyPage() {
 
                 {/* Sessions Section */}
                 <div>
-                  <h2 className="text-2xl font-bold text-vica-brown font-rufina mb-4">SESSIONS</h2>
-                  <p className="text-vica-brown leading-relaxed text-base mb-4">
+                  <h2 className="text-2xl font-bold text-vica-brown2 font-rufina mb-4">SESSIONS</h2>
+                  <p className="text-vica-brown leading-relaxed text-lg mb-4">
                     Using crystal bowls and ancestral instruments, our sound journeys are designed to relax, balance and reconnect. We accompany women, couples, and groups who are seeking wellness.
                   </p>
-                  <div className="flex flex-wrap gap-3 text-vica-brown font-medium text-sm">
+                  <div className="flex flex-wrap gap-3 text-vica-brown2 font-medium text-lg">
                     <span>HARMONY</span>
                     <span>•</span>
                     <span>EXPRESSION</span>
@@ -169,7 +169,7 @@ export default function VicaHarmonyPage() {
         </section>
 
         {/* SECTION 2: INSTINCTIVE ART - Mint Background, Content Left, Images Right */}
-        <section className="bg-vica-mint min-h-screen py-16 lg:py-24">
+        <section className="bg-vica-beige_claro min-h-screen py-16 lg:py-24">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-start">
               
@@ -184,23 +184,23 @@ export default function VicaHarmonyPage() {
                 {/* Title */}
                 <div>
                   <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-3 font-rufina leading-tight">
-                    <span className="text-vica-brown">INSTINCTIVE</span>
+                    <span className="text-vica-brown2">INSTINCTIVE</span>
                     <br />
-                    <span className="text-vica-brown">ART</span>
+                    <span className="text-vica-brown2">ART</span>
                   </h2>
                 </div>
 
                 {/* Description */}
                 <div>
-                  <p className="text-vica-brown leading-relaxed text-base">
+                  <p className="text-vica-brown2 leading-relaxed text-lg">
                     Join our creative workshops and support groups, where art meets therapy. In a welcoming environment, we make you feel fully embraced and at home.
                   </p>
                 </div>
 
                 {/* Benefits Section */}
                 <div>
-                  <h3 className="text-2xl font-bold text-vica-brown font-rufina mb-4">BENEFITS</h3>
-                  <ul className="space-y-2 text-vica-brown text-sm">
+                  <h3 className="text-2xl font-bold text-vica-brown2 font-rufina mb-4">BENEFITS</h3>
+                  <ul className="space-y-2 text-vica-brown2 text-lg">
                     <li className="flex items-start">
                       <span className="mr-3 mt-1">•</span>
                       <span>Decreasing levels of anxiety and stress</span>
@@ -230,11 +230,11 @@ export default function VicaHarmonyPage() {
 
                 {/* Sessions Section */}
                 <div>
-                  <h3 className="text-2xl font-bold text-vica-brown font-rufina mb-4">SESSIONS</h3>
-                  <p className="text-vica-brown leading-relaxed text-base mb-4">
+                  <h3 className="text-2xl font-bold text-vica-brown2 font-rufina mb-4">SESSIONS</h3>
+                  <p className="text-vica-brown leading-relaxed text-lg mb-4">
                     We use accessible, innovative techniques such as:
                   </p>
-                  <ul className="space-y-1 text-vica-brown text-sm ml-4">
+                  <ul className="space-y-1 text-vica-brown2 text-lg ml-4">
                     <li>• Collage</li>
                     <li>• Drawing</li>
                     <li>• Painting</li>
@@ -335,7 +335,7 @@ export default function VicaHarmonyPage() {
                   className="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-4"
                 >
                   {[1, 2, 3].map((index) => (
-                    <div key={index} className="bg-white/60 backdrop-blur-sm rounded-xl p-4 shadow-md border border-vica-brown/10">
+                    <div key={index} className="bg-white/60 backdrop-blur-sm rounded-xl p-4 shadow-md border border-vica-brown2/10">
                       <div className="flex items-center mb-2">
                         {[...Array(5)].map((_, i) => (
                           <svg key={i} className="w-4 h-4 text-yellow-400 fill-current" viewBox="0 0 20 20">
@@ -343,9 +343,9 @@ export default function VicaHarmonyPage() {
                           </svg>
                         ))}
                       </div>
-                      <p className="text-vica-brown font-semibold text-sm mb-1">Loved it!</p>
-                      <p className="text-vica-brown/70 text-xs mb-2">Contar sobre la experiencia</p>
-                      <p className="text-vica-brown/60 text-xs font-medium">Camila</p>
+                      <p className="text-vica-brown2 font-semibold text-lg mb-1">Loved it!</p>
+                      <p className="text-vica-brown2/70 text-lg mb-2">Contar sobre la experiencia</p>
+                      <p className="text-vica-brown2/60 text-lg font-medium">Camila</p>
                     </div>
                   ))}
                 </motion.div>
@@ -356,9 +356,9 @@ export default function VicaHarmonyPage() {
       </main>
 
       {/* Disclaimer Footer */}
-      <div className="bg-vica-brown py-8">
+      <div className="bg-vica-green2 py-8">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <p className="text-vica-mint text-center text-sm leading-relaxed">
+          <p className="text-vica-beige_claro text-center text-sm leading-relaxed">
             OUR SERVICES SUPPORT YOUR WELL-BEING, BUT THEY DO NOT REPLACE MEDICAL CARE. 
             PLEASE SEEK PROFESSIONAL HELP IF NEEDED.
           </p>

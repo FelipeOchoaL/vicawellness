@@ -62,10 +62,10 @@ const MainPageHeader: React.FC = () => {
     <header className="relative">
       {/* Two-section layout */}
       <div className="flex">
-        {/* Left Section - Brown with opacity */}
+        {/* Left Section - green with opacity */}
         <div className="w-1/2 relative">
           <div className="absolute inset-0 bg-vica-mint"></div>
-          <div className="absolute inset-0 bg-vica-brown2"></div>
+          <div className="absolute inset-0 bg-vica-green2"></div>
           <div className="relative z-10 px-4 sm:px-6 lg:px-8">
             <div className="flex justify-start items-center h-24">
               {/* Logo */}
@@ -113,7 +113,7 @@ const MainPageHeader: React.FC = () => {
               backgroundImage: "url('/wellness-bg.jpg')"
             }}
           ></div>
-          <div className="absolute inset-0 bg-vica-brown2/75"></div>
+          <div className="absolute inset-0 bg-vica-green2/75"></div>
           <div className="relative z-10 px-4 sm:px-6 lg:px-8">
             <div className="flex justify-end items-center h-24">
               {/* Desktop Navigation */}
@@ -194,7 +194,7 @@ const MainPageHeader: React.FC = () => {
 
               {/* Desktop CTA */}
               <div className="hidden md:flex items-center">
-                <button className="bg-vica-mint backdrop-blur-sm text-vica-greenletter px-6 py-2 rounded-full text-sm font-medium hover:bg-white/30 transition-all duration-300 border border-white/20">
+                <button className="bg-vica-beige_claro backdrop-blur-sm text-vica-greenletter px-6 py-2 rounded-full text-sm font-medium hover:bg-vica-beige2 transition-all duration-300 border border-white/20">
                   Book now
                 </button>
               </div>

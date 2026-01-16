@@ -27,7 +27,9 @@ export default function HomePage() {
       <main>
         <Info />
         <About />
-        <Features />
+        <section id="Features">
+          <Features />
+        </section>
         <Fqa />
         <Opinions />
       </main>

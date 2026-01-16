@@ -19,9 +19,10 @@ const MainPageHeader: React.FC = () => {
   ]
 
   const servicesDropdown = [
-    { name: 'VICA HARMONY', href: '/services/vica-harmony', description: 'Meditation and mindfulness practices' },
-    { name: 'VICA SENIOR', href: '/services/vica-senior', description: 'Specialized wellness programs' },
-    { name: 'VICA SUPPORT', href: '/services/vica-guide', description: 'Creative art therapy sessions' },
+    { name: 'VICA JOY', href: '/services/vica-joy', description: 'Move your body, free your spirit' },
+    { name: 'VICA CREATE', href: '/services/vica-create', description: 'Unleash your creativity and self-expression' },
+    { name: 'VICA HARMONY', href: '/services/vica-harmony', description: 'Let sound guide you back to calm' },
+    { name: 'VICA SERENITY', href: '/services/vica-serenity', description: 'Find stillness within, cultivate inner peace' },
   ]
 
   const handleMouseEnterServices = () => {
@@ -166,7 +167,7 @@ const MainPageHeader: React.FC = () => {
                         animate={{ opacity: 1, y: 0 }}
                         exit={{ opacity: 0, y: -10 }}
                         transition={{ duration: 0.2, ease: "easeOut" }}
-                        className="absolute top-full left-1/2 transform -translate-x-1/2 mt-2 w-72 bg-vica-beige rounded-2xl shadow-2xl overflow-hidden z-50 border border-vica-brown/10"
+                        className="absolute top-full left-1/2 transform -translate-x-1/2 mt-2 w-72 bg-vica-green2 rounded-2xl shadow-2xl overflow-hidden z-50 border border-white/10"
                         onMouseEnter={handleMouseEnterServices}
                         onMouseLeave={handleMouseLeaveServices}
                       >
@@ -175,12 +176,12 @@ const MainPageHeader: React.FC = () => {
                             <Link
                               key={service.name}
                               href={service.href}
-                              className="block px-6 py-4 hover:bg-vica-brown/10 transition-colors duration-200 group"
+                              className="block px-6 py-4 hover:bg-white/10 transition-colors duration-200 group"
                             >
-                              <div className="text-sm font-bold text-vica-brown group-hover:text-vica-greenletter transition-colors tracking-wide">
+                              <div className="text-sm font-bold text-white group-hover:text-vica-beige_claro transition-colors tracking-wide">
                                 {service.name}
                               </div>
-                              <div className="text-xs text-vica-brown/70 mt-1 leading-relaxed">
+                              <div className="text-xs text-white/80 mt-1 leading-relaxed">
                                 {service.description}
                               </div>
                             </Link>

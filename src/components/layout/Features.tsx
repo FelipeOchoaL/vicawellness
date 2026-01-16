@@ -9,33 +9,43 @@ const Features: React.FC = () => {
   const services = [
     {
       id: 1,
-      title: 'VICA HARMONY',
-      slug: 'vica-harmony',
-      description: 'Meditation and mindfulness practices to bring peace and balance to your daily life.',
-      image: '/vica-harmony.jpg', // Placeholder - add your image to /public/
-      bgClass: 'bg-vica-browncardervices/20',
+      title: 'VICA JOY',
+      slug: 'vica-joy',
+      description: 'Move your body, free your spirit through expressive movement therapy and joyful dance.',
+      image: '/vica-joy.jpg', // Placeholder - add your image to /public/
+      bgClass: 'bg-vica-beige_claro',
       textClass: 'text-vica-brown',
-      buttonClass: 'bg-vica-mint text-vica-greenletter'
+      buttonClass: 'bg-vica-green2 text-vica-beige_claro'
     },
     {
       id: 2,
-      title: 'VICA GUIDE',
-      slug: 'vica-guide',
-      description: 'Creative art therapy sessions that nurture the soul and encourage self-expression.',
-      image: '/vica-guide.jpg', // Placeholder - add your image to /public/
-      bgClass: 'bg-vica-browncardervices/20',
+      title: 'VICA CREATE',
+      slug: 'vica-create',
+      description: 'Unleash your creativity through hands-on artistic workshops and creative expression sessions.',
+      image: '/vica-create.jpg', // Placeholder - add your image to /public/
+      bgClass: 'bg-vica-beige_claro',
       textClass: 'text-vica-brown',
-      buttonClass: 'bg-vica-mint text-vica-greenletter'
+      buttonClass: 'bg-vica-green2 text-vica-beige_claro'
     },
     {
       id: 3,
-      title: 'VICA SENIOR',
-      slug: 'vica-senior',
-      description: 'Specialized wellness programs tailored for our beloved senior community members.',
-      image: '/vica-senior.jpg', // Placeholder - add your image to /public/
-      bgClass: 'bg-vica-browncardervices/20',
-      textClass: 'text-vica-brown',
-      buttonClass: 'bg-vica-mint text-vica-greenletter'
+      title: 'VICA HARMONY',
+      slug: 'vica-harmony',
+      description: 'Let sound guide you back to calm through crystal bowls and ancestral instruments.',
+      image: '/vica-harmony.jpg', // Placeholder - add your image to /public/
+      bgClass: 'bg-vica-brown2',
+      textClass: 'text-vica-beige_claro',
+      buttonClass: 'bg-vica-green2 text-vica-beige_claro'
+    },
+    {
+      id: 4,
+      title: 'VICA SERENITY',
+      slug: 'vica-serenity',
+      description: 'Find stillness within and cultivate inner peace through mindfulness and meditation practices.',
+      image: '/vica-serenity.jpg', // Placeholder - add your image to /public/
+      bgClass: 'bg-vica-brown2',
+      textClass: 'text-vica-beige_claro',
+      buttonClass: 'bg-vica-green2 text-vica-beige_claro'
     }
   ]
 
@@ -61,7 +71,7 @@ const Features: React.FC = () => {
         </motion.div>
 
         {/* Services Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {services.map((service, index) => (
             <motion.div
               key={service.id}

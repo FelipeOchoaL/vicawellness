@@ -19,7 +19,7 @@ export default function VicaGuidePage() {
         </div>
       </div>
       
-      <main className="pt-24 bg-vica-beige min-h-screen">
+      <main className="pt-24 bg-vica-beige2 min-h-screen">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
             
@@ -91,7 +91,7 @@ export default function VicaGuidePage() {
               {/* Testimonials */}
               <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                 {[1, 2, 3].map((index) => (
-                  <div key={index} className="bg-white/50 backdrop-blur-sm rounded-lg p-4 border border-vica-brown/10">
+                  <div key={index} className="bg-white/50 backdrop-blur-sm rounded-lg p-4 border border-vica-brown2/10">
                     <div className="flex items-center mb-2">
                       {[...Array(5)].map((_, i) => (
                         <svg key={i} className="w-4 h-4 text-yellow-400 fill-current" viewBox="0 0 20 20">
@@ -99,9 +99,9 @@ export default function VicaGuidePage() {
                         </svg>
                       ))}
                     </div>
-                    <p className="text-vica-brown font-medium text-sm mb-1">Inspiring & healing!</p>
-                    <p className="text-vica-brown/70 text-xs mb-2">Contar sobre la experiencia</p>
-                    <p className="text-vica-brown/60 text-xs">Maria</p>
+                    <p className="text-vica-brown font-medium text-lg mb-1">Inspiring & healing!</p>
+                    <p className="text-vica-brown/70 text-lg mb-2">Contar sobre la experiencia</p>
+                    <p className="text-vica-brown/60 text-lg">Maria</p>
                   </div>
                 ))}
               </div>
@@ -112,17 +112,17 @@ export default function VicaGuidePage() {
               {/* Title */}
               <div>
                 <h1 className="text-5xl md:text-6xl font-bold mb-2 font-rufina">
-                  <span className="text-vica-green">VICA</span>{' '}
-                  <span className="text-vica-brown">SUPPORT</span>
+                  <span className="text-vica-green2_claro">VICA</span>{' '}
+                  <span className="text-vica-brown2">SUPPORT</span>
                 </h1>
-                <p className="text-xl md:text-2xl text-vica-brown italic mt-2">
+                <p className="text-xl md:text-2xl text-vica-brown2 italic mt-2">
                   Express yourself, heal your soul
                 </p>
               </div>
 
               {/* Description */}
               <div className="space-y-4">
-                <p className="text-vica-brown leading-relaxed">
+                <p className="text-vica-brown2 leading-relaxed text-lg">
                   Vica Support offers creative art therapy sessions that nurture your soul and encourage 
                   self-expression. Through various artistic mediums, we guide you on a journey of 
                   self-discovery, emotional healing, and personal growth. Art becomes your language 
@@ -132,8 +132,8 @@ export default function VicaGuidePage() {
 
               {/* Benefits Section */}
               <div className="space-y-4">
-                <h2 className="text-2xl font-bold text-vica-brown font-rufina">BENEFITS</h2>
-                <ul className="space-y-2 text-vica-brown">
+                <h2 className="text-2xl font-bold text-vica-brown2 font-rufina">BENEFITS</h2>
+                <ul className="space-y-2 text-vica-brown2 text-lg">
                   <li className="flex items-start">
                     <span className="mr-2">•</span>
                     <span>Encourages self-expression & creativity</span>
@@ -163,15 +163,15 @@ export default function VicaGuidePage() {
 
               {/* Sessions Section */}
               <div className="space-y-4">
-                <h2 className="text-2xl font-bold text-vica-brown font-rufina">SESSIONS</h2>
-                <p className="text-vica-brown leading-relaxed">
+                <h2 className="text-2xl font-bold text-vica-brown2 font-rufina">SESSIONS</h2>
+                <p className="text-vica-brown2 leading-relaxed text-lg">
                   Our art therapy sessions are designed to help you explore your inner world through 
                   creative expression. Whether you&apos;re an experienced artist or have never picked 
                   up a brush, Vica Support provides a safe, supportive space for healing and growth. 
                   We work with individuals and groups, using various artistic mediums to facilitate 
                   your wellness journey.
                 </p>
-                <div className="flex flex-wrap gap-4 text-vica-brown font-medium">
+                <div className="flex flex-wrap gap-4 text-vica-brown2 font-medium text-lg">
                   <span>CREATIVITY</span>
                   <span>•</span>
                   <span>EXPRESSION</span>
@@ -184,7 +184,7 @@ export default function VicaGuidePage() {
               <div className="pt-4">
                 <Link
                   href="#book"
-                  className="bg-vica-greenletter text-white px-8 py-4 rounded-lg text-lg font-medium tracking-wide hover:bg-vica-greenletter/90 transition-colors inline-block w-full text-center"
+                  className="bg-vica-green2_claro text-white px-8 py-4 rounded-lg text-lg font-medium tracking-wide hover:bg-vica-green2/90 transition-colors inline-block w-full text-center"
                 >
                   BOOK NOW
                 </Link>
@@ -195,9 +195,9 @@ export default function VicaGuidePage() {
       </main>
 
       {/* Disclaimer Footer */}
-      <div className="bg-vica-brown py-8">
+      <div className="bg-vica-green2 py-8">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <p className="text-vica-mint text-center text-sm leading-relaxed">
+          <p className="text-vica-beige_claro text-center text-sm leading-relaxed">
             OUR SERVICES SUPPORT YOUR WELL-BEING, BUT THEY DO NOT REPLACE MEDICAL CARE. 
             PLEASE SEEK PROFESSIONAL HELP IF NEEDED.
           </p>

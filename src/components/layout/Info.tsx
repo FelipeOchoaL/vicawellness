@@ -62,7 +62,7 @@ const Info: React.FC = () => {
               </h3>
               
               {/* CTA Button */}
-              <button className="bg-vica-green2_claro text-vica-beige_claro px-8 py-2 text-sm font-medium tracking-wide hover:bg-vica-green2 transition-colors">
+              <button className="bg-vica-green2 text-vica-beige_claro px-8 py-2 text-sm font-medium tracking-wide hover:bg-vica-green2_oscuro transition-colors">
                 VIEW SERVICE
               </button>
             </div>

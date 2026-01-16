@@ -19,7 +19,7 @@ export default function VicaSeniorPage() {
       
       <main className="pt-24">
         {/* SECTION 1: VICA SENIOR - Mint Background, Content Left, Images Right */}
-        <section className="bg-vica-mint min-h-screen py-16 lg:py-24">
+        <section className="bg-vica-beige_claro min-h-screen py-16 lg:py-24">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-start">
               
@@ -34,9 +34,9 @@ export default function VicaSeniorPage() {
                 {/* Title */}
                 <div>
                   <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-3 font-rufina leading-tight">
-                    <span className="text-vica-brown">VICA</span>
+                    <span className="text-vica-brown2">VICA</span>
                     <br />
-                    <span className="text-vica-brown">SENIOR</span>
+                    <span className="text-vica-green2_claro">SENIOR</span>
                   </h1>
                   <p className="text-xl md:text-2xl text-vica-brown/80 italic mt-4">
                     "A space to navigate change, grief, and the search for meaning"
@@ -45,10 +45,10 @@ export default function VicaSeniorPage() {
 
                 {/* Description */}
                 <div>
-                  <p className="text-vica-brown leading-relaxed text-lg mb-4">
+                  <p className="text-vica-brown2 leading-relaxed text-lg mb-4">
                     Vica Guide accompanies you through meaningful moments in your life — times of loss, transition, and the search for purpose.
                   </p>
-                  <p className="text-vica-brown leading-relaxed text-lg">
+                  <p className="text-vica-brown2 leading-relaxed text-lg">
                     Through self-awareness tools such as coaching, the Enneagram, transpersonal grief work, and art therapy, you&apos;ll find a path toward clarity, inner strength, and calm.
                   </p>
                 </div>
@@ -58,7 +58,7 @@ export default function VicaSeniorPage() {
                   <motion.button
                     whileHover={{ scale: 1.02 }}
                     whileTap={{ scale: 0.98 }}
-                    className="bg-vica-greenletter text-white px-8 py-4 rounded-full text-base font-medium tracking-wide hover:bg-vica-greenletter/90 transition-colors shadow-lg"
+                    className="bg-vica-greenletter text-vica-beige_claro px-8 py-4 rounded-full text-base font-medium tracking-wide hover:bg-vica-greenletter/90 transition-colors shadow-lg"
                   >
                     BOOK NOW
                   </motion.button>
@@ -143,8 +143,8 @@ export default function VicaSeniorPage() {
         {/* OUR SERVICES Section with Overlapping Circles */}
         <div className="relative">
           {/* Brown Header Bar - Much Larger to go through middle of circles */}
-          <div className="bg-vica-brown py-20 md:py-24">
-            <h2 className="text-3xl md:text-4xl font-bold text-center text-vica-mint font-rufina tracking-wide">
+          <div className="bg-vica-brown2 py-20 md:py-24">
+            <h2 className="text-3xl md:text-4xl font-bold text-center text-vica-beige_claro font-rufina tracking-wide">
               OUR SERVICES
             </h2>
           </div>
@@ -163,7 +163,7 @@ export default function VicaSeniorPage() {
                   className="flex flex-col items-center text-center -mt-44"
                 >
                   {/* Circular Image with Brown Border */}
-                  <div className="relative w-44 h-44 mb-6 rounded-full overflow-hidden shadow-lg bg-vica-mint border-8 border-vica-brown">
+                  <div className="relative w-44 h-44 mb-6 rounded-full overflow-hidden shadow-lg bg-vica-beige_claro border-8 border-vica-brown">
                     <div className="absolute inset-0 flex items-center justify-center text-vica-brown text-xs p-4">
                       Art materials
                     </div>
@@ -179,10 +179,10 @@ export default function VicaSeniorPage() {
                   
                   {/* Content */}
                   <div className="space-y-3">
-                    <p className="text-vica-brown text-sm leading-relaxed">
+                    <p className="text-vica-brown2 text-lg leading-relaxed">
                       Creative activities using a variety of art materials.
                     </p>
-                    <ul className="text-vica-brown text-xs space-y-1">
+                    <ul className="text-vica-brown2 text-lg space-y-1">
                       <li>• Encourage self-expression</li>
                       <li>• Stimulate imagination</li>
                       <li>• Inspire hope</li>
@@ -200,7 +200,7 @@ export default function VicaSeniorPage() {
                   className="flex flex-col items-center text-center -mt-44"
                 >
                   {/* Circular Image with Brown Border */}
-                  <div className="relative w-44 h-44 mb-6 rounded-full overflow-hidden shadow-lg bg-vica-mint border-8 border-vica-brown">
+                  <div className="relative w-44 h-44 mb-6 rounded-full overflow-hidden shadow-lg bg-vica-beige_claro border-8 border-vica-brown">
                     <div className="absolute inset-0 flex items-center justify-center text-vica-brown text-xs p-4">
                       Musical instruments
                     </div>
@@ -216,10 +216,10 @@ export default function VicaSeniorPage() {
                   
                   {/* Content */}
                   <div className="space-y-3">
-                    <p className="text-vica-brown text-sm leading-relaxed">
+                    <p className="text-vica-brown2 text-lg leading-relaxed">
                       Musical activities with simple instruments and music from past decades.
                     </p>
-                    <ul className="text-vica-brown text-xs space-y-1">
+                    <ul className="text-vica-brown2 text-lg space-y-1">
                       <li>• Stimulate memory</li>
                       <li>• Encourage body movement</li>
                       <li>• <em>Recommended for people with Alzheimer&apos;s or any type of dementia</em></li>
@@ -236,7 +236,7 @@ export default function VicaSeniorPage() {
                   className="flex flex-col items-center text-center -mt-44"
                 >
                   {/* Circular Image with Brown Border */}
-                  <div className="relative w-44 h-44 mb-6 rounded-full overflow-hidden shadow-lg bg-vica-mint border-8 border-vica-brown">
+                  <div className="relative w-44 h-44 mb-6 rounded-full overflow-hidden shadow-lg bg-vica-beige_claro border-8 border-vica-brown">
                     <div className="absolute inset-0 flex items-center justify-center text-vica-brown text-xs p-4">
                       Essential oils
                     </div>
@@ -252,10 +252,10 @@ export default function VicaSeniorPage() {
                   
                   {/* Content */}
                   <div className="space-y-3">
-                    <p className="text-vica-brown text-sm leading-relaxed">
+                    <p className="text-vica-brown2 text-lg leading-relaxed">
                       Sesiones de cariño a través de sonidos relajantes y aceites esenciales.
                     </p>
-                    <ul className="text-vica-brown text-xs space-y-1">
+                    <ul className="text-vica-brown2 text-lg space-y-1">
                       <li>• Contribuyen a la relajación y disminución de la ansiedad</li>
                       <li>• Mejoran el estado de ánimo</li>
                       <li>• <em>Recomendamos para reajuste de patrones de sueño</em></li>
@@ -268,7 +268,7 @@ export default function VicaSeniorPage() {
         </div>
 
         {/* SECTION 3: Sessions & Benefits - Beige Background, Content Left, Images Right */}
-        <section className="bg-vica-beige py-16 lg:py-20">
+        <section className="bg-vica-beige2 py-16 lg:py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-start">
               
@@ -282,22 +282,22 @@ export default function VicaSeniorPage() {
               >
                 {/* Sessions Section */}
                 <div>
-                  <h3 className="text-3xl font-bold text-vica-brown font-rufina mb-4">SESSIONS</h3>
-                  <p className="text-vica-brown leading-relaxed text-base mb-4">
+                  <h3 className="text-3xl font-bold text-vica-brown2 font-rufina mb-4">SESSIONS</h3>
+                  <p className="text-vica-brown2 leading-relaxed text-lg mb-4">
                     Each session is a one-on-one experience, offered in person in Toronto or Spanish.
                   </p>
-                  <p className="text-vica-brown leading-relaxed text-base">
+                  <p className="text-vica-brown2 leading-relaxed text-lg">
                     Every session lasts about 60 minutes and is designed to gently guide you through your personal process.
                   </p>
                 </div>
 
                 {/* Benefits Section */}
                 <div>
-                  <h3 className="text-3xl font-bold text-vica-brown font-rufina mb-4">BENEFITS</h3>
-                  <p className="text-vica-brown leading-relaxed text-base mb-4">
+                  <h3 className="text-3xl font-bold text-vica-brown2 font-rufina mb-4">BENEFITS</h3>
+                  <p className="text-vica-brown2 leading-relaxed text-lg mb-4">
                     What can you experience through this guidance?
                   </p>
-                  <ul className="space-y-2 text-vica-brown text-sm">
+                  <ul className="space-y-2 text-vica-brown text-lg">
                     <li className="flex items-start">
                       <span className="mr-3 mt-1">•</span>
                       <span>Emotional support and compassionate care through grief</span>
@@ -398,7 +398,7 @@ export default function VicaSeniorPage() {
         </section>
 
         {/* SECTION 4: Testimonials */}
-        <section className="bg-vica-beige py-12">
+        <section className="bg-vica-beige2 py-12">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <motion.div 
               initial={{ opacity: 0, y: 20 }}
@@ -414,7 +414,7 @@ export default function VicaSeniorPage() {
                   whileInView={{ opacity: 1, scale: 1 }}
                   transition={{ duration: 0.4, delay: index * 0.1 }}
                   viewport={{ once: true }}
-                  className="bg-white/60 backdrop-blur-sm rounded-xl p-4 shadow-md border border-vica-brown/10"
+                  className="bg-white/60 backdrop-blur-sm rounded-xl p-4 shadow-md border border-vica-brown2/10"
                 >
                   <div className="flex items-center justify-center mb-2">
                     {[...Array(5)].map((_, i) => (
@@ -423,8 +423,8 @@ export default function VicaSeniorPage() {
                       </svg>
                     ))}
                   </div>
-                  <p className="text-vica-brown font-semibold text-xs mb-1 text-center">Loved it!</p>
-                  <p className="text-vica-brown/70 text-xs mb-2 text-center">Contar sobre la experiencia</p>
+                  <p className="text-vica-brown font-semibold text-lg mb-1 text-center">Loved it!</p>
+                  <p className="text-vica-brown/70 text-lg mb-2 text-center">Contar sobre la experiencia</p>
                   <p className="text-vica-brown/60 text-xs font-medium text-center">Camila</p>
                 </motion.div>
               ))}
@@ -434,9 +434,9 @@ export default function VicaSeniorPage() {
       </main>
 
       {/* Disclaimer Footer */}
-      <div className="bg-vica-brown py-8">
+      <div className="bg-vica-green2 py-8">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <p className="text-vica-mint text-center text-sm leading-relaxed">
+          <p className="text-vica-beige_claro text-center text-sm leading-relaxed">
             OUR SERVICES SUPPORT YOUR WELL-BEING, BUT THEY DO NOT REPLACE MEDICAL CARE. 
             PLEASE SEEK PROFESSIONAL HELP IF NEEDED.
           </p>

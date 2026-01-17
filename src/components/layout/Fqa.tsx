@@ -81,7 +81,7 @@ const Fqa: React.FC = () => {
                   className="w-full px-6 md:px-8 py-6 flex items-start justify-between gap-4 text-left group"
                 >
                   {/* Number Badge */}
-                  <div className="flex-shrink-0 w-8 h-8 rounded-full bg-vica-beige flex items-center justify-center">
+                  <div className="flex-shrink-0 w-8 h-8 rounded-full bg-vica-beige2 flex items-center justify-center">
                     <span className="text-vica-brown2 font-semibold text-lg">
                       {faq.id}
                     </span>
@@ -89,7 +89,7 @@ const Fqa: React.FC = () => {
 
                   {/* Question Text */}
                   <div className="flex-1">
-                    <h3 className="text-lg md:text-xl font-semibold text-vica-brown group-hover:text-vica-greenletter transition-colors">
+                    <h3 className="text-lg md:text-xl font-semibold text-vica-brown2 group-hover:text-vica-green2 transition-colors">
                       {faq.question}
                     </h3>
                   </div>
@@ -146,7 +146,7 @@ const Fqa: React.FC = () => {
         >
           <p className="text-lg text-vica-brown2 mb-4">Still have questions?</p>
           <motion.button
-            className="text-lg bg-vica-green2_claro text-beige_claro px-8 py-3 rounded-full font-medium hover:bg-vica-greenletter/90 transition-colors"
+            className="text-lg bg-vica-green2 text-beige_claro px-8 py-3 rounded-full font-medium hover:bg-vica-greenletter/90 transition-colors"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
